@@ -1,47 +1,50 @@
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Aggregates;
 using Cortex.Mediator;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using VocaFy.NextPath.Platform.Shared.Domain.Model.Aggregates;
 
 namespace VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Interceptors;
 
-public class DispatchDomainEventsInterceptor(IMediator mediator) : SaveChangesInterceptor
+public sealed class DispatchDomainEventsInterceptor(IMediator mediator) : SaveChangesInterceptor
 {
-    public override async ValueTask<int> SavedChangesAsync(
-        SaveChangesCompletedEventData eventData,
-        int result,
+    /// <inheritdoc />
+    public override InterceptionResult<int> SavingChanges(DbContextEventData eventData, InterceptionResult<int> result)
+    {
+        DispatchDomainEvents(eventData.Context).GetAwaiter().GetResult();
+        return base.SavingChanges(eventData, result);
+    }
+
+    public override async ValueTask<InterceptionResult<int>> SavingChangesAsync(
+        DbContextEventData eventData,
+        InterceptionResult<int> result,
         CancellationToken cancellationToken = default)
     {
         await DispatchDomainEvents(eventData.Context, cancellationToken);
-
-        return await base.SavedChangesAsync(eventData, result, cancellationToken);
+        return await base.SavingChangesAsync(eventData, result, cancellationToken);
     }
 
-    private async Task DispatchDomainEvents(
-        DbContext? context,
-        CancellationToken cancellationToken)
+    private async Task DispatchDomainEvents(DbContext? context, CancellationToken cancellationToken = default)
     {
-        if (context is null)
-            return;
+        if (context is null) return;
 
-        var aggregates = context.ChangeTracker
+        var aggregateRoots = context.ChangeTracker
             .Entries<IAggregateRoot>()
-            .Select(entry => entry.Entity)
-            .Where(aggregate => aggregate.DomainEvents.Any())
+            .Where(e => e.Entity.DomainEvents.Any())
+            .Select(e => e.Entity)
             .ToList();
 
-        var domainEvents = aggregates
-            .SelectMany(aggregate => aggregate.DomainEvents)
+        var domainEvents = aggregateRoots
+            .SelectMany(e => e.DomainEvents)
             .ToList();
+
+        foreach (var aggregateRoot in aggregateRoots)
+        {
+            aggregateRoot.ClearDomainEvents();
+        }
 
         foreach (var domainEvent in domainEvents)
         {
             await mediator.PublishAsync(domainEvent, cancellationToken);
-        }
-
-        foreach (var aggregate in aggregates)
-        {
-            aggregate.ClearDomainEvents();
         }
     }
 }

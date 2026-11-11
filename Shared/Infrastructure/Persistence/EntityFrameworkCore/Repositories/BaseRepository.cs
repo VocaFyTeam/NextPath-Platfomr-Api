@@ -4,23 +4,39 @@ using Microsoft.EntityFrameworkCore;
 
 namespace VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
 
-public class BaseRepository<T>(AppDbContext context) : IBaseRepository<T> 
-    where T : class
+public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
 {
-    protected readonly AppDbContext Context = context;
+    protected readonly AppDbContext Context;
 
-    public async Task AddAsync(T entity, CancellationToken cancellationToken)
+    protected BaseRepository(AppDbContext context)
     {
-        await Context.Set<T>().AddAsync(entity, cancellationToken);
+        Context = context;
     }
-
-    public void Update(T entity)
+    public async Task AddAsync(TEntity entity, CancellationToken cancellationToken = default)
     {
-        Context.Set<T>().Update(entity);
+        await Context.Set<TEntity>().AddAsync(entity, cancellationToken);
     }
-
-    public void Remove(T entity)
+    public async Task<TEntity?> FindByIdAsync<TId>(TId id, CancellationToken cancellationToken = default)
+        where TId : struct
     {
-        Context.Set<T>().Remove(entity);
+        return await Context.Set<TEntity>().FindAsync(new object[] { id }, cancellationToken);
+    }
+    public void Update(TEntity entity)
+    {
+        Context.Set<TEntity>().Update(entity);
+    }
+    public void Remove(TEntity entity)
+    {
+        Context.Set<TEntity>().Remove(entity);
+    }
+    public async Task<IEnumerable<TEntity>> ListAsync(CancellationToken cancellationToken = default)
+    {
+        return await Context.Set<TEntity>().ToListAsync(cancellationToken);
+    }
+    public async Task<IEnumerable<TEntity>> ListAsNoTrackingAsync(CancellationToken cancellationToken = default)
+    {
+        return await Context.Set<TEntity>()
+            .AsNoTracking()
+            .ToListAsync(cancellationToken);
     }
 }

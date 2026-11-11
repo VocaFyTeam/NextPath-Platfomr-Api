@@ -1,49 +1,35 @@
 using VocaFy.NextPath.Platform.Shared.Domain.Model.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-namespace VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Interceptors;
 
-public class AuditableEntityInterceptor : SaveChangesInterceptor
+namespace VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Interceptors;
+public sealed class AuditableEntityInterceptor : SaveChangesInterceptor
 {
-    private static void UpdateTimestamps(DbContext? context)
+    /// <inheritdoc />
+    public override InterceptionResult<int> SavingChanges(DbContextEventData eventData, InterceptionResult<int> result)
+    {
+        ApplyAuditTimestamps(eventData.Context);
+        return base.SavingChanges(eventData, result);
+    }
+    public override ValueTask<InterceptionResult<int>> SavingChangesAsync(
+        DbContextEventData eventData,
+        InterceptionResult<int> result,
+        CancellationToken cancellationToken = default)
+    {
+        ApplyAuditTimestamps(eventData.Context);
+        return base.SavingChangesAsync(eventData, result, cancellationToken);
+    }
+
+    private static void ApplyAuditTimestamps(DbContext? context)
     {
         if (context is null) return;
 
-        var entries = context.ChangeTracker.Entries<IAuditableEntity>();
+        var now = DateTimeOffset.UtcNow;
 
-        var utcNow = DateTimeOffset.UtcNow;
-
-        foreach (var entry in entries)
+        foreach (var entry in context.ChangeTracker.Entries<IAuditableEntity>())
         {
-            if (entry.State == EntityState.Added)
-            {
-                entry.Entity.CreatedAt = utcNow;
-                entry.Entity.UpdatedAt = utcNow;
-            }
-            if(entry.State == EntityState.Modified)
-            {
-                entry.Entity.UpdatedAt = utcNow;
-                entry.Property(entity => entity.CreatedAt).IsModified = false;
-            }
+            if (entry.State is EntityState.Added or EntityState.Modified) entry.Entity.UpdatedAt = now;
+            if (entry.State == EntityState.Added) entry.Entity.CreatedAt ??= now;
         }
-    }
-
-    public override InterceptionResult<int> SavingChanges(
-        DbContextEventData eventData, 
-        InterceptionResult<int> result)
-    {
-        UpdateTimestamps(eventData.Context);
-        return base.SavingChanges(eventData, result);
-    }
-
-    public override ValueTask<InterceptionResult<int>> SavingChangesAsync(
-        DbContextEventData eventData, 
-        InterceptionResult<int> result,
-        CancellationToken cancellationToken = default
-    )
-    {
-        UpdateTimestamps(eventData.Context);
-
-        return base.SavingChangesAsync(eventData, result, cancellationToken);
     }
 }

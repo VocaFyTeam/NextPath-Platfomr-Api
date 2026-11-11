@@ -3,11 +3,11 @@ using VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFramework
 
 namespace VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
 
-
 public class UnitOfWork(AppDbContext context) : IUnitOfWork
 {
-    public async Task<int> CompleteAsync(CancellationToken cancellationToken)
+    // inheritedDoc
+    public async Task CompleteAsync(CancellationToken cancellationToken = default)
     {
-        return await context.SaveChangesAsync(cancellationToken);
+        await context.SaveChangesAsync(cancellationToken);
     }
 }

@@ -1,10 +1,10 @@
 using DomainErrorModel = VocaFy.NextPath.Platform.Shared.Domain.Model.Errors.Error;
+
 namespace VocaFy.NextPath.Platform.Shared.Application.Model;
 
 public class Result<T>
 {
-    protected Result(bool isSuccess, T? value, string message, Enum? errorEnum,
-    DomainErrorModel? error)
+    protected Result(bool isSuccess, T? value, string message, Enum? errorEnum, DomainErrorModel? error)
     {
         IsSuccess = isSuccess;
         Value = value;
@@ -24,6 +24,7 @@ public class Result<T>
     {
         return new Result<T>(true, value, string.Empty, null, DomainErrorModel.None);
     }
+
     public static Result<T> Failure(Enum error, string message)
     {
         return new Result<T>(false, default, message, error, DomainErrorModel.Failure(error.ToString(), message));
@@ -41,12 +42,10 @@ public class Result<T>
 
     public TResult Match<TResult>(Func<T, TResult> onSuccess, Func<DomainErrorModel, TResult> onFailure) =>
         IsSuccess ? onSuccess(Value!) : onFailure(DomainError);
-
 }
-
 public class Result : Result<object>
 {
-     private Result(bool isSuccess, string message, Enum? errorEnum, DomainErrorModel? error)
+    private Result(bool isSuccess, string message, Enum? errorEnum, DomainErrorModel? error)
         : base(isSuccess, null, message, errorEnum, error)
     {
     }
@@ -66,7 +65,7 @@ public class Result : Result<object>
         return new Result(false, error.Message, null, error);
     }
 
-    public new static Result Failure(DomainErrorModel error, Enum errorEnum)
+    public static Result Failure(DomainErrorModel error, Enum errorEnum)
     {
         return new Result(false, error.Message, errorEnum, error);
     }

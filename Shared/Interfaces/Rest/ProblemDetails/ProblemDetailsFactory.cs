@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace VocaFy.NextPath.Platform.Shared.Interfaces.Rest;
 
@@ -24,7 +26,7 @@ public class ProblemDetailsFactory : Microsoft.AspNetCore.Mvc.Infrastructure.Pro
 
     public override ValidationProblemDetails CreateValidationProblemDetails(
         HttpContext httpContext,
-        Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary modelStateDictionary,
+        ModelStateDictionary modelStateDictionary,
         int? statusCode = null,
         string? title = null,
         string? type = null,

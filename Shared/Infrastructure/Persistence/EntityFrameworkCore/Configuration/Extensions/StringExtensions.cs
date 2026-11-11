@@ -1,4 +1,3 @@
-
 using Humanizer;
 
 namespace VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration.Extensions;
