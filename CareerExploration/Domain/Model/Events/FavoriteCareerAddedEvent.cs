@@ -1,7 +1,7 @@
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
-using NextPath.Platform.Shared.Domain.Model.Events;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Events;
 
-namespace NextPath.Platform.CareerExploration.Domain.Model.Events;
+namespace VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Events;
 
 public class FavoriteCareerAddedEvent(StudentId studentId, CareerId careerId) : IEvent
 {

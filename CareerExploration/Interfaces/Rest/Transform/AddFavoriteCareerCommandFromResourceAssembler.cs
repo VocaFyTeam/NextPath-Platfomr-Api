@@ -1,8 +1,8 @@
-using NextPath.Platform.CareerExploration.Domain.Model.Commands;
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
-using NextPath.Platform.CareerExploration.Interfaces.Rest.Resources;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.CareerExploration.Interfaces.Rest.Resources;
 
-namespace NextPath.Platform.CareerExploration.Interfaces.Rest.Transform;
+namespace VocaFy.NextPath.Platform.CareerExploration.Interfaces.Rest.Transform;
 
 public static class AddFavoriteCareerCommandFromResourceAssembler
 {

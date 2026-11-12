@@ -1,5 +1,5 @@
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.CareerExploration.Domain.Model.Queries;
+namespace VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Queries;
 
 public record GetFavoriteCareerByIdQuery(FavoriteCareerId FavoriteCareerId);

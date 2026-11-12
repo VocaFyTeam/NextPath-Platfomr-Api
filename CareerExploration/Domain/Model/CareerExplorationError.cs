@@ -1,4 +1,4 @@
-namespace NextPath.Platform.CareerExploration.Domain.Model;
+namespace VocaFy.NextPath.Platform.CareerExploration.Domain.Model;
 
 public enum CareerExplorationError
 {

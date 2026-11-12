@@ -1,4 +1,4 @@
-namespace NextPath.Platform.CareerExploration.Interfaces.Acl;
+namespace VocaFy.NextPath.Platform.CareerExploration.Interfaces.Acl;
 
 /// <summary>Favorite career of a student, with the data other contexts need (e.g. Monitoring).</summary>
 public record FavoriteCareerSummary(int CareerId, string Name, string Area);

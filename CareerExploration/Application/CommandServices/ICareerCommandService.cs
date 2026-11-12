@@ -1,8 +1,8 @@
-using NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
-using NextPath.Platform.CareerExploration.Domain.Model.Commands;
-using NextPath.Platform.Shared.Application.Model;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.Shared.Application.Model;
 
-namespace NextPath.Platform.CareerExploration.Application.CommandServices;
+namespace VocaFy.NextPath.Platform.CareerExploration.Application.CommandServices;
 
 public interface ICareerCommandService
 {

@@ -1,8 +1,8 @@
 using Microsoft.Extensions.Logging;
-using NextPath.Platform.CareerExploration.Domain.Model.Events;
-using NextPath.Platform.Shared.Application.Internal.EventHandlers;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Events;
+using VocaFy.NextPath.Platform.Shared.Application.Internal.EventHandlers;
 
-namespace NextPath.Platform.CareerExploration.Application.Internal.EventHandlers;
+namespace VocaFy.NextPath.Platform.CareerExploration.Application.Internal.EventHandlers;
 
 public class FavoriteCareerAddedEventHandler(ILogger<FavoriteCareerAddedEventHandler> logger)
     : IEventHandler<FavoriteCareerAddedEvent>

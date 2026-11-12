@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
-using NextPath.Platform.CareerExploration.Domain.Repositories;
-using NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration;
-using NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Repositories;
+using VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration;
+using VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
 
-namespace NextPath.Platform.CareerExploration.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
+namespace VocaFy.NextPath.Platform.CareerExploration.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
 
 public class FavoriteCareerRepository(AppDbContext context)
     : BaseRepository<FavoriteCareer>(context), IFavoriteCareerRepository

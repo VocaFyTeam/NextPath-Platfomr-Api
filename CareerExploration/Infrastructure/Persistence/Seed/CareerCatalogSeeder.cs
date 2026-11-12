@@ -1,12 +1,12 @@
 using System.Text.Json;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NextPath.Platform.CareerExploration.Application.CommandServices;
-using NextPath.Platform.CareerExploration.Domain.Model;
-using NextPath.Platform.CareerExploration.Domain.Model.Commands;
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.CareerExploration.Application.CommandServices;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.CareerExploration.Infrastructure.Persistence.Seed;
+namespace VocaFy.NextPath.Platform.CareerExploration.Infrastructure.Persistence.Seed;
 
 /// <summary>
 ///     Loads the initial career catalog (the same 6 careers the frontend had in db.json).

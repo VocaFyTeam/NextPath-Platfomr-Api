@@ -1,7 +1,7 @@
-using NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
-using NextPath.Platform.CareerExploration.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Queries;
 
-namespace NextPath.Platform.CareerExploration.Application.QueryServices;
+namespace VocaFy.NextPath.Platform.CareerExploration.Application.QueryServices;
 
 public interface IFavoriteCareerQueryService
 {

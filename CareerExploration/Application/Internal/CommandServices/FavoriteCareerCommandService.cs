@@ -1,14 +1,14 @@
 using Microsoft.EntityFrameworkCore;
-using NextPath.Platform.CareerExploration.Application.CommandServices;
-using NextPath.Platform.CareerExploration.Domain.Model;
-using NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
-using NextPath.Platform.CareerExploration.Domain.Model.Commands;
-using NextPath.Platform.CareerExploration.Domain.Model.Errors;
-using NextPath.Platform.CareerExploration.Domain.Repositories;
-using NextPath.Platform.Shared.Application.Model;
-using NextPath.Platform.Shared.Domain.Repositories;
+using VocaFy.NextPath.Platform.CareerExploration.Application.CommandServices;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Errors;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Repositories;
+using VocaFy.NextPath.Platform.Shared.Application.Model;
+using VocaFy.NextPath.Platform.Shared.Domain.Repositories;
 
-namespace NextPath.Platform.CareerExploration.Application.Internal.CommandServices;
+namespace VocaFy.NextPath.Platform.CareerExploration.Application.Internal.CommandServices;
 
 public class FavoriteCareerCommandService(
     IFavoriteCareerRepository favoriteCareerRepository,

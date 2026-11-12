@@ -1,7 +1,7 @@
-using NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.CareerExploration.Application.Internal.OutboundServices;
+namespace VocaFy.NextPath.Platform.CareerExploration.Application.Internal.OutboundServices;
 
 /// <summary>
 ///     Port towards the Assessments context. CareerExploration does not know how the vocational

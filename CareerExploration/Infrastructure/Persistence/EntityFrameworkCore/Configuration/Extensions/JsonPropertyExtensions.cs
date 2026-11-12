@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace NextPath.Platform.CareerExploration.Infrastructure.Persistence.EntityFrameworkCore.Configuration.Extensions;
+namespace VocaFy.NextPath.Platform.CareerExploration.Infrastructure.Persistence.EntityFrameworkCore.Configuration.Extensions;
 
 /// <summary>
 ///     Stores a value object (or a list of them) as JSON in a single column. It works with any

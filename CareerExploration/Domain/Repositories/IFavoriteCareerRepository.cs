@@ -1,8 +1,8 @@
-using NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
-using NextPath.Platform.Shared.Domain.Repositories;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Domain.Repositories;
 
-namespace NextPath.Platform.CareerExploration.Domain.Repositories;
+namespace VocaFy.NextPath.Platform.CareerExploration.Domain.Repositories;
 
 public interface IFavoriteCareerRepository : IBaseRepository<FavoriteCareer>
 {

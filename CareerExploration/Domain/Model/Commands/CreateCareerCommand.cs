@@ -1,6 +1,6 @@
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.CareerExploration.Domain.Model.Commands;
+namespace VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Commands;
 
 public record CreateCareerCommand(
     string Name,

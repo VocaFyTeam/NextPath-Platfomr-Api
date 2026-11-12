@@ -1,9 +1,9 @@
-using NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
-using NextPath.Platform.CareerExploration.Domain.Model.Queries;
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
-using NextPath.Platform.Shared.Application.Model;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Application.Model;
 
-namespace NextPath.Platform.CareerExploration.Application.QueryServices;
+namespace VocaFy.NextPath.Platform.CareerExploration.Application.QueryServices;
 
 public interface ICareerQueryService
 {

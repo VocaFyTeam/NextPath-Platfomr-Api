@@ -1,9 +1,9 @@
-using NextPath.Platform.CareerExploration.Application.QueryServices;
-using NextPath.Platform.CareerExploration.Domain.Model.Queries;
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
-using NextPath.Platform.CareerExploration.Interfaces.Acl;
+using VocaFy.NextPath.Platform.CareerExploration.Application.QueryServices;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.CareerExploration.Interfaces.Acl;
 
-namespace NextPath.Platform.CareerExploration.Application.Acl;
+namespace VocaFy.NextPath.Platform.CareerExploration.Application.Acl;
 
 public class CareerExplorationContextFacade(
     ICareerQueryService careerQueryService,

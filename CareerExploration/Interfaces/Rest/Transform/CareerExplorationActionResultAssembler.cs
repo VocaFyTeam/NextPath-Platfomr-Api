@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
-using NextPath.Platform.CareerExploration.Domain.Model;
-using NextPath.Platform.CareerExploration.Domain.Model.Errors;
-using NextPath.Platform.Shared.Application.Model;
-using NextPath.Platform.Shared.Domain.Model.Errors;
-using NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Errors;
+using VocaFy.NextPath.Platform.Shared.Application.Model;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Errors;
+using VocaFy.NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
 
-namespace NextPath.Platform.CareerExploration.Interfaces.Rest.Transform;
+namespace VocaFy.NextPath.Platform.CareerExploration.Interfaces.Rest.Transform;
 
 public static class CareerExplorationActionResultAssembler
 {

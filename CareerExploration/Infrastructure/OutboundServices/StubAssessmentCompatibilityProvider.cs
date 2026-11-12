@@ -1,8 +1,8 @@
-using NextPath.Platform.CareerExploration.Application.Internal.OutboundServices;
-using NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.CareerExploration.Application.Internal.OutboundServices;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.CareerExploration.Infrastructure.OutboundServices;
+namespace VocaFy.NextPath.Platform.CareerExploration.Infrastructure.OutboundServices;
 
 /// <summary>
 ///     TEMPORARY adapter. Until the Assessments context publishes its facade, every student gets

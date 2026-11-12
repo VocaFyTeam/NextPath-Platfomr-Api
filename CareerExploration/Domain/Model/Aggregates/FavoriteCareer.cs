@@ -1,10 +1,10 @@
-using NextPath.Platform.CareerExploration.Domain.Model.Commands;
-using NextPath.Platform.CareerExploration.Domain.Model.Events;
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
-using NextPath.Platform.Shared.Domain.Model.Aggregates.Internal;
-using NextPath.Platform.Shared.Domain.Model.Entities;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Events;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Aggregates.Internal;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Entities;
 
-namespace NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+namespace VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
 
 /// <summary>A career a student saved in the favorites list (HU19). Unique per (student, career).</summary>
 public class FavoriteCareer : AggregateRoot, IAuditableEntity

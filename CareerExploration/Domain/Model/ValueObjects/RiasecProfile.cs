@@ -1,4 +1,4 @@
-namespace NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+namespace VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
 
 /// <summary>
 ///     RIASEC (Holland) profile that characterizes a career, each dimension from 0 to 100.

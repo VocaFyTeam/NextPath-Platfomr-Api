@@ -1,7 +1,7 @@
-using NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
-using NextPath.Platform.CareerExploration.Interfaces.Rest.Resources;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.CareerExploration.Interfaces.Rest.Resources;
 
-namespace NextPath.Platform.CareerExploration.Interfaces.Rest.Transform;
+namespace VocaFy.NextPath.Platform.CareerExploration.Interfaces.Rest.Transform;
 
 public static class FavoriteCareerResourceFromEntityAssembler
 {

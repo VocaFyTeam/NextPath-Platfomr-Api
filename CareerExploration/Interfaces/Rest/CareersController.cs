@@ -1,16 +1,16 @@
 using System.Net.Mime;
 using Microsoft.AspNetCore.Mvc;
-using NextPath.Platform.CareerExploration.Application.QueryServices;
-using NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
-using NextPath.Platform.CareerExploration.Domain.Model;
-using NextPath.Platform.CareerExploration.Domain.Model.Errors;
-using NextPath.Platform.CareerExploration.Domain.Model.Queries;
-using NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
-using NextPath.Platform.CareerExploration.Interfaces.Rest.Resources;
-using NextPath.Platform.CareerExploration.Interfaces.Rest.Transform;
-using NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
+using VocaFy.NextPath.Platform.CareerExploration.Application.QueryServices;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Errors;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.CareerExploration.Interfaces.Rest.Resources;
+using VocaFy.NextPath.Platform.CareerExploration.Interfaces.Rest.Transform;
+using VocaFy.NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
 
-namespace NextPath.Platform.CareerExploration.Interfaces.Rest;
+namespace VocaFy.NextPath.Platform.CareerExploration.Interfaces.Rest;
 
 /// <summary>Career catalog: search, detail, comparison and compatibility (HU15-HU18, TS09, TS10).</summary>
 [ApiController]

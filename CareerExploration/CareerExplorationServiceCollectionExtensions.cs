@@ -1,16 +1,16 @@
 using Microsoft.Extensions.DependencyInjection;
-using NextPath.Platform.CareerExploration.Application.Acl;
-using NextPath.Platform.CareerExploration.Application.CommandServices;
-using NextPath.Platform.CareerExploration.Application.Internal.CommandServices;
-using NextPath.Platform.CareerExploration.Application.Internal.OutboundServices;
-using NextPath.Platform.CareerExploration.Application.Internal.QueryServices;
-using NextPath.Platform.CareerExploration.Application.QueryServices;
-using NextPath.Platform.CareerExploration.Domain.Repositories;
-using NextPath.Platform.CareerExploration.Infrastructure.OutboundServices;
-using NextPath.Platform.CareerExploration.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
-using NextPath.Platform.CareerExploration.Interfaces.Acl;
+using VocaFy.NextPath.Platform.CareerExploration.Application.Acl;
+using VocaFy.NextPath.Platform.CareerExploration.Application.CommandServices;
+using VocaFy.NextPath.Platform.CareerExploration.Application.Internal.CommandServices;
+using VocaFy.NextPath.Platform.CareerExploration.Application.Internal.OutboundServices;
+using VocaFy.NextPath.Platform.CareerExploration.Application.Internal.QueryServices;
+using VocaFy.NextPath.Platform.CareerExploration.Application.QueryServices;
+using VocaFy.NextPath.Platform.CareerExploration.Domain.Repositories;
+using VocaFy.NextPath.Platform.CareerExploration.Infrastructure.OutboundServices;
+using VocaFy.NextPath.Platform.CareerExploration.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
+using VocaFy.NextPath.Platform.CareerExploration.Interfaces.Acl;
 
-namespace NextPath.Platform.CareerExploration;
+namespace VocaFy.NextPath.Platform.CareerExploration;
 
 public static class CareerExplorationServiceCollectionExtensions
 {

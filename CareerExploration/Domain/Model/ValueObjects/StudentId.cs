@@ -1,6 +1,6 @@
-using NextPath.Platform.Shared.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
+namespace VocaFy.NextPath.Platform.CareerExploration.Domain.Model.ValueObjects;
 
 /// <summary>
 ///     Reference to a student that lives in the IAM context. This context only keeps the id
