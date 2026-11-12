@@ -1,4 +1,4 @@
-namespace NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
 
 public record GroupMonitoringSummary(
     StudentGroupId GroupId,

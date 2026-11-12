@@ -1,7 +1,7 @@
-using NextPath.Platform.Monitoring.Domain.Model.Aggregates;
-using NextPath.Platform.Monitoring.Interfaces.Rest.Resources;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Resources;
 
-namespace NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
+namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
 public static class VocationalReportResourceFromEntityAssembler
 {
     public static VocationalReportResource ToResourceFromEntity(VocationalReport entity)

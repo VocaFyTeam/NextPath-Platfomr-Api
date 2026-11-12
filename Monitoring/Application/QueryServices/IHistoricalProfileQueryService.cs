@@ -1,9 +1,9 @@
-using NextPath.Platform.Monitoring.Domain.Model.Aggregates;
-using NextPath.Platform.Monitoring.Domain.Model.Entities;
-using NextPath.Platform.Monitoring.Domain.Model.Queries;
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Entities;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Monitoring.Application.QueryServices;
+namespace VocaFy.NextPath.Platform.Monitoring.Application.QueryServices;
 
 
 public interface IHistoricalProfileQueryService

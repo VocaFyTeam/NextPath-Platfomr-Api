@@ -1,6 +1,6 @@
-using NextPath.Platform.Iam.Interfaces.Acl;
+using VocaFy.NextPath.Platform.Iam.Interfaces.Acl;
 
-namespace NextPath.Platform.Monitoring.Application.Internal.OutboundServices.ACL;
+namespace VocaFy.NextPath.Platform.Monitoring.Application.Internal.OutboundServices.ACL;
 
 
 public class ExternalIamService(IIamContextFacade iamContextFacade) : IExternalIamService

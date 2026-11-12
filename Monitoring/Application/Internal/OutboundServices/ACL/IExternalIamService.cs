@@ -1,4 +1,4 @@
-namespace NextPath.Platform.Monitoring.Application.Internal.OutboundServices.ACL;
+namespace VocaFy.NextPath.Platform.Monitoring.Application.Internal.OutboundServices.ACL;
 
 
 public interface IExternalIamService

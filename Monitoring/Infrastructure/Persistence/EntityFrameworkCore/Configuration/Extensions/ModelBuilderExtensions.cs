@@ -1,12 +1,12 @@
-using NextPath.Platform.Monitoring.Domain.Model.Aggregates;
-using NextPath.Platform.Monitoring.Domain.Model.Entities;
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
-using NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityFrameworkCore.Configuration.ValueConverters;
-using NextPath.Platform.Shared.Domain.Model.ValueObjects;
-using NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration.ValueConverters;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Entities;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityFrameworkCore.Configuration.ValueConverters;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration.ValueConverters;
 using Microsoft.EntityFrameworkCore;
 
-namespace NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityFrameworkCore.Configuration.Extensions;
+namespace VocaFy.NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityFrameworkCore.Configuration.Extensions;
 
 public static class ModelBuilderExtensions
 {

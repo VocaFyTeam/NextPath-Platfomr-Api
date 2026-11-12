@@ -1,11 +1,11 @@
-using NextPath.Platform.Monitoring.Domain.Model.Aggregates;
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
-using NextPath.Platform.Monitoring.Domain.Repositories;
-using NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration;
-using NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Repositories;
+using VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration;
+using VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
+namespace VocaFy.NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
 
 public class VocationalReportRepository(AppDbContext context) : BaseRepository<VocationalReport>(context), IVocationalReportRepository
 {

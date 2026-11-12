@@ -1,7 +1,7 @@
-using NextPath.Platform.Monitoring.Domain.Model.Aggregates;
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Monitoring.Application.Internal.OutboundServices;
+namespace VocaFy.NextPath.Platform.Monitoring.Application.Internal.OutboundServices;
 
 public interface IAIReportService
 {

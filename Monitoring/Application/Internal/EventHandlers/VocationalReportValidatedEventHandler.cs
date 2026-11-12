@@ -1,7 +1,7 @@
-using NextPath.Platform.Monitoring.Domain.Model.Events;
-using NextPath.Platform.Shared.Application.Internal.EventHandlers;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Events;
+using VocaFy.NextPath.Platform.Shared.Application.Internal.EventHandlers;
 
-namespace NextPath.Platform.Monitoring.Application.Internal.EventHandlers;
+namespace VocaFy.NextPath.Platform.Monitoring.Application.Internal.EventHandlers;
 
 public class VocationalReportValidatedEventHandler(ILogger<VocationalReportValidatedEventHandler> logger) : IEventHandler<VocationalReportValidatedEvent>
 {

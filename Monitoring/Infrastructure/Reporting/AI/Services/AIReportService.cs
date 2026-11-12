@@ -1,9 +1,9 @@
 using System.Text;
-using NextPath.Platform.Monitoring.Application.Internal.OutboundServices;
-using NextPath.Platform.Monitoring.Domain.Model.Aggregates;
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Monitoring.Application.Internal.OutboundServices;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Monitoring.Infrastructure.Reporting.AI.Services;
+namespace VocaFy.NextPath.Platform.Monitoring.Infrastructure.Reporting.AI.Services;
 
 public class AIReportService : IAIReportService
 {

@@ -1,8 +1,8 @@
 using System.Security.Cryptography;
 using System.Text;
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Monitoring.Domain.Model.Entities;
+namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.Entities;
 
 public partial class ProfessionalObservation
 {

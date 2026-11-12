@@ -1,9 +1,9 @@
-using NextPath.Platform.Monitoring.Application.QueryServices;
-using NextPath.Platform.Monitoring.Domain.Model.Aggregates;
-using NextPath.Platform.Monitoring.Domain.Model.Queries;
-using NextPath.Platform.Monitoring.Domain.Repositories;
+using VocaFy.NextPath.Platform.Monitoring.Application.QueryServices;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Repositories;
 
-namespace NextPath.Platform.Monitoring.Application.Internal.QueryServices;
+namespace VocaFy.NextPath.Platform.Monitoring.Application.Internal.QueryServices;
 
 public class StudentGroupQueryService(IStudentGroupRepository groupRepository) : IStudentGroupQueryService
 {

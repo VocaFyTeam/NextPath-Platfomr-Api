@@ -1,6 +1,6 @@
-using NextPath.Platform.Shared.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
 
 public readonly record struct StudentGroupId(int Value) : IEntityId<int>
 {

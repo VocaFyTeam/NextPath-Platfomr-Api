@@ -1,6 +1,6 @@
-using IamUser = NextPath.Platform.Iam.Domain.Model.Aggregates.User;
+using IamUser = VocaFy.NextPath.Platform.Iam.Domain.Model.Aggregates.User;
 
-namespace NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
+namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
 
 public static class AuthenticatedUserAssembler
 {

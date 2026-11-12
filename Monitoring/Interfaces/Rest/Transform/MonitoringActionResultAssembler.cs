@@ -1,11 +1,11 @@
-using NextPath.Platform.Monitoring.Domain.Model;
-using NextPath.Platform.Resources.Errors;
-using NextPath.Platform.Shared.Application.Model;
-using NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model;
+using VocaFy.NextPath.Platform.Resources.Errors;
+using VocaFy.NextPath.Platform.Shared.Application.Model;
+using VocaFy.NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
-namespace NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
+namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
 
 public static class MonitoringActionResultAssembler
 {

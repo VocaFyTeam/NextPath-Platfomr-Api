@@ -1,19 +1,19 @@
 using System.Net.Mime;
-using NextPath.Platform.Iam.Infrastructure.Pipeline.Middleware.Attributes;
-using NextPath.Platform.Resources.Errors;
-using NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
+using VocaFy.NextPath.Platform.Iam.Infrastructure.Pipeline.Middleware.Attributes;
+using VocaFy.NextPath.Platform.Resources.Errors;
+using VocaFy.NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
-using NextPath.Platform.Monitoring.Application.CommandServices;
-using NextPath.Platform.Monitoring.Application.QueryServices;
-using NextPath.Platform.Monitoring.Domain.Model;
-using NextPath.Platform.Monitoring.Domain.Model.Commands;
-using NextPath.Platform.Monitoring.Domain.Model.Queries;
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
-using NextPath.Platform.Monitoring.Interfaces.Rest.Resources;
-using NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
+using VocaFy.NextPath.Platform.Monitoring.Application.CommandServices;
+using VocaFy.NextPath.Platform.Monitoring.Application.QueryServices;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Resources;
+using VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
 
-namespace NextPath.Platform.Monitoring.Interfaces.Rest;
+namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest;
 
 [Authorize]
 [ApiController]

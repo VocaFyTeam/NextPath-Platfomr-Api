@@ -1,10 +1,10 @@
-using NextPath.Platform.Monitoring.Application.CommandServices;
-using NextPath.Platform.Monitoring.Application.QueryServices;
-using NextPath.Platform.Monitoring.Domain.Model.Commands;
-using NextPath.Platform.Monitoring.Domain.Model.Queries;
-using NextPath.Platform.Monitoring.Interfaces.Acl;
+using VocaFy.NextPath.Platform.Monitoring.Application.CommandServices;
+using VocaFy.NextPath.Platform.Monitoring.Application.QueryServices;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.Monitoring.Interfaces.Acl;
 
-namespace NextPath.Platform.Monitoring.Application.Acl;
+namespace VocaFy.NextPath.Platform.Monitoring.Application.Acl;
 
 public class MonitoringContextFacade(
     IHistoricalProfileCommandService profileCommandService,

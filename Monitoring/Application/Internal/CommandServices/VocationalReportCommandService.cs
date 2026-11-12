@@ -1,15 +1,15 @@
-using NextPath.Platform.Monitoring.Application.CommandServices;
-using NextPath.Platform.Monitoring.Application.Internal.OutboundServices;
-using NextPath.Platform.Monitoring.Domain.Model;
-using NextPath.Platform.Monitoring.Domain.Model.Aggregates;
-using NextPath.Platform.Monitoring.Domain.Model.Commands;
-using NextPath.Platform.Monitoring.Domain.Model.Errors;
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
-using NextPath.Platform.Monitoring.Domain.Repositories;
-using NextPath.Platform.Shared.Application.Model;
-using NextPath.Platform.Shared.Domain.Repositories;
+using VocaFy.NextPath.Platform.Monitoring.Application.CommandServices;
+using VocaFy.NextPath.Platform.Monitoring.Application.Internal.OutboundServices;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Errors;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Repositories;
+using VocaFy.NextPath.Platform.Shared.Application.Model;
+using VocaFy.NextPath.Platform.Shared.Domain.Repositories;
 
-namespace NextPath.Platform.Monitoring.Application.Internal.CommandServices;
+namespace VocaFy.NextPath.Platform.Monitoring.Application.Internal.CommandServices;
 
 public class VocationalReportCommandService(
     IVocationalReportRepository reportRepository,

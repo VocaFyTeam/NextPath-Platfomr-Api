@@ -1,8 +1,8 @@
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityFrameworkCore.Configuration.ValueConverters;
+namespace VocaFy.NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityFrameworkCore.Configuration.ValueConverters;
 
 public static class CsvConversions
 {

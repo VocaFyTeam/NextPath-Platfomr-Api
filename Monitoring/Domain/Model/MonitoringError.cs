@@ -1,4 +1,4 @@
-namespace NextPath.Platform.Monitoring.Domain.Model;
+namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model;
 
 public enum MonitoringError
 {

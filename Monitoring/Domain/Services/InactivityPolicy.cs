@@ -1,4 +1,4 @@
-namespace NextPath.Platform.Monitoring.Domain.Services;
+namespace VocaFy.NextPath.Platform.Monitoring.Domain.Services;
 
 public static class InactivityPolicy
 {

@@ -1,4 +1,4 @@
-namespace NextPath.Platform.Monitoring.Interfaces.Acl;
+namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Acl;
 
 public interface IMonitoringContextFacade
 {

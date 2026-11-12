@@ -1,8 +1,8 @@
-using NextPath.Platform.Monitoring.Domain.Model.Events;
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
-using NextPath.Platform.Shared.Domain.Model.Aggregates.Internal;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.Events;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Aggregates.Internal;
 
-namespace NextPath.Platform.Monitoring.Domain.Model.Aggregates;
+namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.Aggregates;
 
 public partial class VocationalReport : AggregateRoot
 {

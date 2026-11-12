@@ -1,6 +1,6 @@
-using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Monitoring.Domain.Model.Commands;
+namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.Commands;
 
 public record ValidateVocationalReportCommand(VocationalReportId VocationalReportId, PsychologistId PsychologistId)
 {

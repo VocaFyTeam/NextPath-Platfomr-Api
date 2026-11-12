@@ -1,6 +1,6 @@
-using NextPath.Platform.Shared.Domain.Model.Entities;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Entities;
 
-namespace NextPath.Platform.Monitoring.Domain.Model.Entities;
+namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.Entities;
 
 public partial class ProfessionalObservation : IAuditableEntity
 {
