@@ -1,0 +1,39 @@
+using NextPath.Platform.Monitoring.Domain.Model.Aggregates;
+using NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+using NextPath.Platform.Monitoring.Domain.Repositories;
+using NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration;
+using NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
+using Microsoft.EntityFrameworkCore;
+
+namespace NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
+
+public class GroupComparisonReportRepository(AppDbContext context) : BaseRepository<GroupComparisonReport>(context), IGroupComparisonReportRepository
+{
+    
+    public new async Task<GroupComparisonReport?> FindByIdAsync(int id, CancellationToken cancellationToken)
+    {
+        var reportId = new GroupComparisonReportId(id);
+        return await Context.Set<GroupComparisonReport>()
+            .FirstOrDefaultAsync(report => report.Id == reportId, cancellationToken);
+    }
+    
+    public new async Task<GroupComparisonReport?> FindByIdAsNoTrackingAsync(int id,
+        CancellationToken cancellationToken = default)
+    {
+        var reportId = new GroupComparisonReportId(id);
+        return await Context.Set<GroupComparisonReport>()
+            .AsNoTracking()
+            .FirstOrDefaultAsync(report => report.Id == reportId, cancellationToken);
+    }
+    
+    public async Task<IEnumerable<GroupComparisonReport>> FindByPsychologistIdAsNoTrackingAsync(int psychologistId,
+        CancellationToken cancellationToken)
+    {
+        var ownerId = new PsychologistId(psychologistId);
+        return await Context.Set<GroupComparisonReport>()
+            .AsNoTracking()
+            .Where(report => report.PsychologistId == ownerId)
+            .OrderBy(report => report.Id)
+            .ToListAsync(cancellationToken);
+    }
+}

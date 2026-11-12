@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="StudentProfileCreated" xml:space="preserve">
+    <value>Ficha del estudiante creada exitosamente.</value>
+  </data>
+    <data name="ObservationRecorded" xml:space="preserve">
+    <value>Observación registrada exitosamente.</value>
+  </data>
+    <data name="ReportValidated" xml:space="preserve">
+    <value>Reporte validado exitosamente.</value>
+  </data>
+</root>
