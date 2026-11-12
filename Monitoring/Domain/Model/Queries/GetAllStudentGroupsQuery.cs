@@ -4,7 +4,7 @@ namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.Queries;
 
 public record GetAllStudentGroupsQuery(PsychologistId PsychologistId)
 {
-    public GetAllStudentGroupsQuery(int psychologistId) : this(new PsychologistId(psychologistId))
+    public GetAllStudentGroupsQuery(Guid psychologistId) : this(new PsychologistId(psychologistId))
     {
     }
 }

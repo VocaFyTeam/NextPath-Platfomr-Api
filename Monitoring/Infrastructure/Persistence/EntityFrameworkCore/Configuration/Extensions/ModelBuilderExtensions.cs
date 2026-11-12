@@ -16,6 +16,13 @@ public static class ModelBuilderExtensions
         return new StronglyTypedIdConverter<TId, int>(id => id.Value, factory);
     }
 
+    // psychologist_id / student_id come from IAM, which uses UUID keys
+    private static StronglyTypedIdConverter<TId, Guid> GuidIdConverter<TId>(Func<Guid, TId> factory)
+        where TId : IEntityId<Guid>
+    {
+        return new StronglyTypedIdConverter<TId, Guid>(id => id.Value, factory);
+    }
+
     public static void ApplyMonitoringConfiguration(this ModelBuilder builder)
     {
         // ---------------- Student Monitoring Context ----------------
@@ -27,7 +34,7 @@ public static class ModelBuilderExtensions
             .IsRequired()
             .ValueGeneratedOnAdd();
         builder.Entity<StudentGroup>().Property(g => g.PsychologistId)
-            .HasConversion(IdConverter(value => new PsychologistId(value)))
+            .HasConversion(GuidIdConverter(value => new PsychologistId(value)))
             .IsRequired();
         builder.Entity<StudentGroup>().Property(g => g.Name).IsRequired().HasMaxLength(StudentGroup.MaxNameLength);
         builder.Entity<StudentGroup>().Property(g => g.Description).IsRequired()
@@ -41,10 +48,10 @@ public static class ModelBuilderExtensions
             .IsRequired()
             .ValueGeneratedOnAdd();
         builder.Entity<HistoricalProfile>().Property(p => p.StudentId)
-            .HasConversion(IdConverter(value => new StudentId(value)))
+            .HasConversion(GuidIdConverter(value => new StudentId(value)))
             .IsRequired();
         builder.Entity<HistoricalProfile>().Property(p => p.AssignedPsychologistId)
-            .HasConversion(IdConverter(value => new PsychologistId(value)))
+            .HasConversion(GuidIdConverter(value => new PsychologistId(value)))
             .IsRequired();
         builder.Entity<HistoricalProfile>().Property(p => p.GroupId)
             .HasConversion(IdConverter(value => new StudentGroupId(value)));
@@ -71,10 +78,10 @@ public static class ModelBuilderExtensions
             .HasConversion(IdConverter(value => new HistoricalProfileId(value)))
             .IsRequired();
         builder.Entity<ProfessionalObservation>().Property(o => o.StudentId)
-            .HasConversion(IdConverter(value => new StudentId(value)))
+            .HasConversion(GuidIdConverter(value => new StudentId(value)))
             .IsRequired();
         builder.Entity<ProfessionalObservation>().Property(o => o.PsychologistId)
-            .HasConversion(IdConverter(value => new PsychologistId(value)))
+            .HasConversion(GuidIdConverter(value => new PsychologistId(value)))
             .IsRequired();
         builder.Entity<ProfessionalObservation>().Property(o => o.ObservationText).IsRequired()
             .HasMaxLength(ProfessionalObservation.MaxObservationLength);
@@ -96,10 +103,10 @@ public static class ModelBuilderExtensions
             .IsRequired()
             .ValueGeneratedOnAdd();
         builder.Entity<VocationalReport>().Property(r => r.StudentId)
-            .HasConversion(IdConverter(value => new StudentId(value)))
+            .HasConversion(GuidIdConverter(value => new StudentId(value)))
             .IsRequired();
         builder.Entity<VocationalReport>().Property(r => r.PsychologistId)
-            .HasConversion(IdConverter(value => new PsychologistId(value)))
+            .HasConversion(GuidIdConverter(value => new PsychologistId(value)))
             .IsRequired();
         builder.Entity<VocationalReport>().Property(r => r.ReportType).HasConversion<string>().IsRequired()
             .HasMaxLength(30);
@@ -116,7 +123,7 @@ public static class ModelBuilderExtensions
             .IsRequired()
             .ValueGeneratedOnAdd();
         builder.Entity<GroupComparisonReport>().Property(r => r.PsychologistId)
-            .HasConversion(IdConverter(value => new PsychologistId(value)))
+            .HasConversion(GuidIdConverter(value => new PsychologistId(value)))
             .IsRequired();
         builder.Entity<GroupComparisonReport>().Property(r => r.SelectedGroupIds)
             .HasConversion(CsvConversions.CreateGroupIdsConverter(), CsvConversions.CreateGroupIdsComparer())

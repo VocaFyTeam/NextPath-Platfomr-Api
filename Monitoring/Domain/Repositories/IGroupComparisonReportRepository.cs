@@ -5,6 +5,9 @@ namespace VocaFy.NextPath.Platform.Monitoring.Domain.Repositories;
 
 public interface IGroupComparisonReportRepository : IBaseRepository<GroupComparisonReport>
 {
-    Task<IEnumerable<GroupComparisonReport>> FindByPsychologistIdAsNoTrackingAsync(int psychologistId,
+    Task<GroupComparisonReport?> FindByIdAsync(int id, CancellationToken cancellationToken);
+
+    Task<GroupComparisonReport?> FindByIdAsNoTrackingAsync(int id, CancellationToken cancellationToken = default);
+    Task<IEnumerable<GroupComparisonReport>> FindByPsychologistIdAsNoTrackingAsync(Guid psychologistId,
         CancellationToken cancellationToken);
 }

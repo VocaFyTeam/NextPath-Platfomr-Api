@@ -1,3 +1,3 @@
 namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Resources;
 
-public record GenerateVocationalReportResource(int StudentId, string ReportType);
+public record GenerateVocationalReportResource(Guid StudentId, string ReportType);

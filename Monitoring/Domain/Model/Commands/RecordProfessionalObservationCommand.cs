@@ -9,7 +9,7 @@ public record RecordProfessionalObservationCommand(
     string Agreements,
     DateTimeOffset? SessionDate)
 {
-    public RecordProfessionalObservationCommand(int historicalProfileId, int psychologistId, string observationText,
+    public RecordProfessionalObservationCommand(int historicalProfileId, Guid psychologistId, string observationText,
         string agreements, DateTimeOffset? sessionDate)
         : this(new HistoricalProfileId(historicalProfileId), new PsychologistId(psychologistId), observationText,
             agreements, sessionDate)

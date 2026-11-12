@@ -6,7 +6,7 @@ namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
 public static class RecordProfessionalObservationCommandFromResourceAssembler
 {
     public static RecordProfessionalObservationCommand ToCommandFromResource(
-        CreateProfessionalObservationResource resource, int historicalProfileId, int psychologistId)
+        CreateProfessionalObservationResource resource, int historicalProfileId, Guid psychologistId)
     {
         ArgumentNullException.ThrowIfNull(resource);
         return new RecordProfessionalObservationCommand(historicalProfileId, psychologistId,

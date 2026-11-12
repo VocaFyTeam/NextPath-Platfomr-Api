@@ -10,14 +10,14 @@ namespace VocaFy.NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityF
 public class GroupComparisonReportRepository(AppDbContext context) : BaseRepository<GroupComparisonReport>(context), IGroupComparisonReportRepository
 {
     
-    public new async Task<GroupComparisonReport?> FindByIdAsync(int id, CancellationToken cancellationToken)
+    public async Task<GroupComparisonReport?> FindByIdAsync(int id, CancellationToken cancellationToken)
     {
         var reportId = new GroupComparisonReportId(id);
         return await Context.Set<GroupComparisonReport>()
             .FirstOrDefaultAsync(report => report.Id == reportId, cancellationToken);
     }
     
-    public new async Task<GroupComparisonReport?> FindByIdAsNoTrackingAsync(int id,
+    public async Task<GroupComparisonReport?> FindByIdAsNoTrackingAsync(int id,
         CancellationToken cancellationToken = default)
     {
         var reportId = new GroupComparisonReportId(id);
@@ -26,7 +26,7 @@ public class GroupComparisonReportRepository(AppDbContext context) : BaseReposit
             .FirstOrDefaultAsync(report => report.Id == reportId, cancellationToken);
     }
     
-    public async Task<IEnumerable<GroupComparisonReport>> FindByPsychologistIdAsNoTrackingAsync(int psychologistId,
+    public async Task<IEnumerable<GroupComparisonReport>> FindByPsychologistIdAsNoTrackingAsync(Guid psychologistId,
         CancellationToken cancellationToken)
     {
         var ownerId = new PsychologistId(psychologistId);

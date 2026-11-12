@@ -4,7 +4,7 @@ namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.Commands;
 
 public record EvaluateInactivityCommand(PsychologistId PsychologistId)
 {
-    public EvaluateInactivityCommand(int psychologistId) : this(new PsychologistId(psychologistId))
+    public EvaluateInactivityCommand(Guid psychologistId) : this(new PsychologistId(psychologistId))
     {
     }
 }

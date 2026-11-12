@@ -4,7 +4,7 @@ namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.Queries;
 
 public record GetHistoricalProfileByStudentIdQuery(StudentId StudentId)
 {
-    public GetHistoricalProfileByStudentIdQuery(int studentId) : this(new StudentId(studentId))
+    public GetHistoricalProfileByStudentIdQuery(Guid studentId) : this(new StudentId(studentId))
     {
     }
 }

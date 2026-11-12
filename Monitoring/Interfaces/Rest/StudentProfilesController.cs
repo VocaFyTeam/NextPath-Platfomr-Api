@@ -37,12 +37,12 @@ public class StudentProfilesController(
     [ProducesResponseType(typeof(IEnumerable<StudentProfileResource>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> GetAllStudentProfiles(
-        [FromQuery] int? psychologistId,
+        [FromQuery] Guid? psychologistId,
         [FromQuery] int? groupId,
-        [FromQuery] int? studentId,
+        [FromQuery] Guid? studentId,
         CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
         if (psychologistId.HasValue && psychologistId.Value != authenticatedId.Value)
             return MonitoringActionResultAssembler.ToForbiddenActionResult(this, _errorLocalizer,
@@ -61,7 +61,7 @@ public class StudentProfilesController(
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetStudentProfileById([FromRoute] int id, CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var profile = await profileQueryService.Handle(new GetHistoricalProfileByIdQuery(id), cancellationToken);
@@ -88,7 +88,7 @@ public class StudentProfilesController(
     public async Task<IActionResult> CreateStudentProfile([FromBody] CreateStudentProfileResource resource,
         CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var command =
@@ -115,7 +115,7 @@ public class StudentProfilesController(
     public async Task<IActionResult> UpdateStudentProfile([FromRoute] int id,
         [FromBody] UpdateStudentProfileResource resource, CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         IReadOnlyCollection<EStudentFlag>? flags = null;
@@ -146,7 +146,7 @@ public class StudentProfilesController(
     [ProducesResponseType(typeof(IEnumerable<StudentProfileResource>), StatusCodes.Status200OK)]
     public async Task<IActionResult> EvaluateInactivity(CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var result = await profileCommandService.Handle(
@@ -169,7 +169,7 @@ public class StudentProfilesController(
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetRecommendations([FromRoute] int id, CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var profile = await profileQueryService.Handle(new GetHistoricalProfileByIdQuery(id), cancellationToken);

@@ -29,7 +29,7 @@ public class HistoricalProfileQueryService(IHistoricalProfileRepository profileR
         CancellationToken cancellationToken)
     {
         int? groupId = query.GroupId is { } group ? group.Value : null;
-        int? studentId = query.StudentId is { } student ? student.Value : null;
+        Guid? studentId = query.StudentId is { } student ? student.Value : null;
         return await profileRepository.FindByPsychologistIdAsNoTrackingAsync(query.PsychologistId, groupId, studentId,
             cancellationToken);
     }

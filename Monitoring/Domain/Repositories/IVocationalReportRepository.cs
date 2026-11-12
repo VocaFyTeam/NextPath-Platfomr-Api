@@ -5,6 +5,9 @@ namespace VocaFy.NextPath.Platform.Monitoring.Domain.Repositories;
 
 public interface IVocationalReportRepository : IBaseRepository<VocationalReport>
 {
-    Task<IEnumerable<VocationalReport>> FindByPsychologistIdAsNoTrackingAsync(int psychologistId, int? studentId,
+    Task<VocationalReport?> FindByIdAsync(int id, CancellationToken cancellationToken);
+
+    Task<VocationalReport?> FindByIdAsNoTrackingAsync(int id, CancellationToken cancellationToken = default);
+    Task<IEnumerable<VocationalReport>> FindByPsychologistIdAsNoTrackingAsync(Guid psychologistId, Guid? studentId,
         CancellationToken cancellationToken);
 }

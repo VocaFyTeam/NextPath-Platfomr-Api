@@ -1,3 +1,3 @@
 namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Resources;
 
-public record CreateStudentProfileResource(int StudentId, int? GroupId, string? Observation);
+public record CreateStudentProfileResource(Guid StudentId, int? GroupId, string? Observation);

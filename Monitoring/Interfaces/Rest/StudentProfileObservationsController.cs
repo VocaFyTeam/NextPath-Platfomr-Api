@@ -37,7 +37,7 @@ public class StudentProfileObservationsController(
     public async Task<IActionResult> GetObservationsByProfileId([FromRoute] int profileId,
         CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var profile = await profileQueryService.Handle(new GetHistoricalProfileByIdQuery(profileId),
@@ -66,7 +66,7 @@ public class StudentProfileObservationsController(
     public async Task<IActionResult> RecordObservation([FromRoute] int profileId,
         [FromBody] CreateProfessionalObservationResource resource, CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var command = RecordProfessionalObservationCommandFromResourceAssembler.ToCommandFromResource(resource,

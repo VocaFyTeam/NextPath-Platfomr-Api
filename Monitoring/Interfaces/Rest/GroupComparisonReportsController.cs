@@ -34,7 +34,7 @@ public class GroupComparisonReportsController(
     [ProducesResponseType(typeof(IEnumerable<GroupComparisonReportResource>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAllGroupComparisonReports(CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var reports = await reportQueryService.Handle(new GetAllGroupComparisonReportsQuery(authenticatedId.Value),
@@ -51,7 +51,7 @@ public class GroupComparisonReportsController(
     public async Task<IActionResult> GetGroupComparisonReportById([FromRoute] int id,
         CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var report = await reportQueryService.Handle(new GetGroupComparisonReportByIdQuery(id), cancellationToken);
@@ -77,7 +77,7 @@ public class GroupComparisonReportsController(
     public async Task<IActionResult> GenerateGroupComparisonReport(
         [FromBody] GenerateGroupComparisonReportResource resource, CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var command =

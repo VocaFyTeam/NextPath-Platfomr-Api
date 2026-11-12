@@ -10,7 +10,7 @@ namespace VocaFy.NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityF
 public class VocationalReportRepository(AppDbContext context) : BaseRepository<VocationalReport>(context), IVocationalReportRepository
 {
 
-    public new async Task<VocationalReport?> FindByIdAsync(int id, CancellationToken cancellationToken)
+    public async Task<VocationalReport?> FindByIdAsync(int id, CancellationToken cancellationToken)
     {
         var reportId = new VocationalReportId(id);
         return await Context.Set<VocationalReport>()
@@ -18,7 +18,7 @@ public class VocationalReportRepository(AppDbContext context) : BaseRepository<V
     }
 
  
-    public new async Task<VocationalReport?> FindByIdAsNoTrackingAsync(int id,
+    public async Task<VocationalReport?> FindByIdAsNoTrackingAsync(int id,
         CancellationToken cancellationToken = default)
     {
         var reportId = new VocationalReportId(id);
@@ -28,8 +28,8 @@ public class VocationalReportRepository(AppDbContext context) : BaseRepository<V
     }
 
 
-    public async Task<IEnumerable<VocationalReport>> FindByPsychologistIdAsNoTrackingAsync(int psychologistId,
-        int? studentId, CancellationToken cancellationToken)
+    public async Task<IEnumerable<VocationalReport>> FindByPsychologistIdAsNoTrackingAsync(Guid psychologistId,
+        Guid? studentId, CancellationToken cancellationToken)
     {
         var ownerId = new PsychologistId(psychologistId);
         var query = Context.Set<VocationalReport>()

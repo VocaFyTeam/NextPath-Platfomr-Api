@@ -6,7 +6,7 @@ namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
 public static class UpdateVocationalReportContentCommandFromResourceAssembler
 {
     public static UpdateVocationalReportContentCommand ToCommandFromResource(
-        UpdateVocationalReportContentResource resource, int vocationalReportId, int psychologistId)
+        UpdateVocationalReportContentResource resource, int vocationalReportId, Guid psychologistId)
     {
         ArgumentNullException.ThrowIfNull(resource);
         return new UpdateVocationalReportContentCommand(vocationalReportId, psychologistId, resource.ContentSummary);

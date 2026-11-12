@@ -9,7 +9,7 @@ public record UpdateHistoricalProfileCommand(
     IReadOnlyCollection<EStudentFlag>? Flags,
     StudentGroupId? GroupId)
 {
-    public UpdateHistoricalProfileCommand(int historicalProfileId, int psychologistId, string? observation,
+    public UpdateHistoricalProfileCommand(int historicalProfileId, Guid psychologistId, string? observation,
         IReadOnlyCollection<EStudentFlag>? flags, int? groupId)
         : this(new HistoricalProfileId(historicalProfileId), new PsychologistId(psychologistId), observation, flags,
             groupId.HasValue ? new StudentGroupId(groupId.Value) : null)

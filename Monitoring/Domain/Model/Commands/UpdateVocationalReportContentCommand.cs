@@ -7,7 +7,7 @@ public record UpdateVocationalReportContentCommand(
     PsychologistId PsychologistId,
     string ContentSummary)
 {
-    public UpdateVocationalReportContentCommand(int vocationalReportId, int psychologistId, string contentSummary)
+    public UpdateVocationalReportContentCommand(int vocationalReportId, Guid psychologistId, string contentSummary)
         : this(new VocationalReportId(vocationalReportId), new PsychologistId(psychologistId), contentSummary)
     {
     }

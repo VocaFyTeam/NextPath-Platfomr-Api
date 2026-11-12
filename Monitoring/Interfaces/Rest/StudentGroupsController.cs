@@ -33,10 +33,10 @@ public class StudentGroupsController(
     [EndpointDescription("Get the groups (for example Grupo A and Grupo B) of the authenticated psychologist.")]
     [ProducesResponseType(typeof(IEnumerable<StudentGroupResource>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status403Forbidden)]
-    public async Task<IActionResult> GetAllStudentGroups([FromQuery] int? psychologistId,
+    public async Task<IActionResult> GetAllStudentGroups([FromQuery] Guid? psychologistId,
         CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
         if (psychologistId.HasValue && psychologistId.Value != authenticatedId.Value)
             return MonitoringActionResultAssembler.ToForbiddenActionResult(this, _errorLocalizer,
@@ -55,7 +55,7 @@ public class StudentGroupsController(
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetStudentGroupById([FromRoute] int id, CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var group = await groupQueryService.Handle(new GetStudentGroupByIdQuery(id), cancellationToken);
@@ -79,7 +79,7 @@ public class StudentGroupsController(
     public async Task<IActionResult> CreateStudentGroup([FromBody] CreateStudentGroupResource resource,
         CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var command =

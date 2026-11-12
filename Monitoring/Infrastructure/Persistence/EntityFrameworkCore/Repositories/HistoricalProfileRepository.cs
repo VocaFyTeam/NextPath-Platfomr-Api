@@ -10,7 +10,7 @@ namespace VocaFy.NextPath.Platform.Monitoring.Infrastructure.Persistence.EntityF
 public class HistoricalProfileRepository(AppDbContext context) : BaseRepository<HistoricalProfile>(context), IHistoricalProfileRepository
 {
     
-    public new async Task<HistoricalProfile?> FindByIdAsync(int id, CancellationToken cancellationToken)
+    public async Task<HistoricalProfile?> FindByIdAsync(int id, CancellationToken cancellationToken)
     {
         var profileId = new HistoricalProfileId(id);
         return await Context.Set<HistoricalProfile>()
@@ -18,7 +18,7 @@ public class HistoricalProfileRepository(AppDbContext context) : BaseRepository<
             .FirstOrDefaultAsync(profile => profile.Id == profileId, cancellationToken);
     }
     
-    public new async Task<HistoricalProfile?> FindByIdAsNoTrackingAsync(int id,
+    public async Task<HistoricalProfile?> FindByIdAsNoTrackingAsync(int id,
         CancellationToken cancellationToken = default)
     {
         var profileId = new HistoricalProfileId(id);
@@ -29,14 +29,14 @@ public class HistoricalProfileRepository(AppDbContext context) : BaseRepository<
             .FirstOrDefaultAsync(profile => profile.Id == profileId, cancellationToken);
     }
     
-    public async Task<HistoricalProfile?> FindByStudentIdAsync(int studentId, CancellationToken cancellationToken)
+    public async Task<HistoricalProfile?> FindByStudentIdAsync(Guid studentId, CancellationToken cancellationToken)
     {
         var id = new StudentId(studentId);
         return await Context.Set<HistoricalProfile>()
             .Include(profile => profile.Observations)
             .FirstOrDefaultAsync(profile => profile.StudentId == id, cancellationToken);
     }
-    public async Task<HistoricalProfile?> FindByStudentIdAsNoTrackingAsync(int studentId,
+    public async Task<HistoricalProfile?> FindByStudentIdAsNoTrackingAsync(Guid studentId,
         CancellationToken cancellationToken)
     {
         var id = new StudentId(studentId);
@@ -47,13 +47,13 @@ public class HistoricalProfileRepository(AppDbContext context) : BaseRepository<
             .FirstOrDefaultAsync(profile => profile.StudentId == id, cancellationToken);
     }
     
-    public async Task<bool> ExistsByStudentIdAsync(int studentId, CancellationToken cancellationToken)
+    public async Task<bool> ExistsByStudentIdAsync(Guid studentId, CancellationToken cancellationToken)
     {
         var id = new StudentId(studentId);
         return await Context.Set<HistoricalProfile>().AnyAsync(profile => profile.StudentId == id, cancellationToken);
     }
-    public async Task<IEnumerable<HistoricalProfile>> FindByPsychologistIdAsNoTrackingAsync(int psychologistId,
-        int? groupId, int? studentId, CancellationToken cancellationToken)
+    public async Task<IEnumerable<HistoricalProfile>> FindByPsychologistIdAsNoTrackingAsync(Guid psychologistId,
+        int? groupId, Guid? studentId, CancellationToken cancellationToken)
     {
         var ownerId = new PsychologistId(psychologistId);
         var query = Context.Set<HistoricalProfile>()
@@ -75,7 +75,7 @@ public class HistoricalProfileRepository(AppDbContext context) : BaseRepository<
         return await query.OrderBy(profile => profile.Id).ToListAsync(cancellationToken);
     }
     
-    public async Task<IEnumerable<HistoricalProfile>> FindByPsychologistIdAsync(int psychologistId,
+    public async Task<IEnumerable<HistoricalProfile>> FindByPsychologistIdAsync(Guid psychologistId,
         CancellationToken cancellationToken)
     {
         var ownerId = new PsychologistId(psychologistId);

@@ -5,13 +5,16 @@ namespace VocaFy.NextPath.Platform.Monitoring.Domain.Repositories;
 
 public interface IHistoricalProfileRepository : IBaseRepository<HistoricalProfile>
 {
+    Task<HistoricalProfile?> FindByIdAsync(int id, CancellationToken cancellationToken);
 
-    Task<HistoricalProfile?> FindByStudentIdAsync(int studentId, CancellationToken cancellationToken);
-    Task<HistoricalProfile?> FindByStudentIdAsNoTrackingAsync(int studentId, CancellationToken cancellationToken);
-    Task<bool> ExistsByStudentIdAsync(int studentId, CancellationToken cancellationToken);
-    Task<IEnumerable<HistoricalProfile>> FindByPsychologistIdAsNoTrackingAsync(int psychologistId, int? groupId,
-        int? studentId, CancellationToken cancellationToken);
-    Task<IEnumerable<HistoricalProfile>> FindByPsychologistIdAsync(int psychologistId,
+    Task<HistoricalProfile?> FindByIdAsNoTrackingAsync(int id, CancellationToken cancellationToken = default);
+
+    Task<HistoricalProfile?> FindByStudentIdAsync(Guid studentId, CancellationToken cancellationToken);
+    Task<HistoricalProfile?> FindByStudentIdAsNoTrackingAsync(Guid studentId, CancellationToken cancellationToken);
+    Task<bool> ExistsByStudentIdAsync(Guid studentId, CancellationToken cancellationToken);
+    Task<IEnumerable<HistoricalProfile>> FindByPsychologistIdAsNoTrackingAsync(Guid psychologistId, int? groupId,
+        Guid? studentId, CancellationToken cancellationToken);
+    Task<IEnumerable<HistoricalProfile>> FindByPsychologistIdAsync(Guid psychologistId,
         CancellationToken cancellationToken);
     Task<IEnumerable<HistoricalProfile>> FindByGroupIdAsNoTrackingAsync(int groupId,
         CancellationToken cancellationToken);

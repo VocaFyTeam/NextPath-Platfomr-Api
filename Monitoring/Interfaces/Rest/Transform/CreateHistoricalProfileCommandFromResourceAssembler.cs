@@ -6,7 +6,7 @@ namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
 public static class CreateHistoricalProfileCommandFromResourceAssembler
 {
     public static CreateHistoricalProfileCommand ToCommandFromResource(CreateStudentProfileResource resource,
-        int psychologistId)
+        Guid psychologistId)
     {
         ArgumentNullException.ThrowIfNull(resource);
         return new CreateHistoricalProfileCommand(resource.StudentId, psychologistId, resource.GroupId,

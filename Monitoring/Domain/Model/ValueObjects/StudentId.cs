@@ -2,10 +2,10 @@ using VocaFy.NextPath.Platform.Shared.Domain.Model.ValueObjects;
 
 namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
 
-public readonly record struct StudentId(int Value) : IEntityId<int>
+public readonly record struct StudentId(Guid Value) : IEntityId<Guid>
 {
-    public static implicit operator int(StudentId id) => id.Value;
-    public static implicit operator StudentId(int value) => new(value);
+    public static implicit operator Guid(StudentId id) => id.Value;
+    public static implicit operator StudentId(Guid value) => new(value);
 
     public override string ToString() => Value.ToString();
 }

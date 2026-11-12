@@ -34,10 +34,10 @@ public class VocationalReportsController(
     [EndpointSummary("Get the vocational reports of the authenticated psychologist")]
     [EndpointDescription("Get the vocational reports of the authenticated psychologist, optionally filtered by student.")]
     [ProducesResponseType(typeof(IEnumerable<VocationalReportResource>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetAllVocationalReports([FromQuery] int? studentId,
+    public async Task<IActionResult> GetAllVocationalReports([FromQuery] Guid? studentId,
         CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var reports = await reportQueryService.Handle(new GetAllVocationalReportsQuery(authenticatedId.Value, studentId),
@@ -53,7 +53,7 @@ public class VocationalReportsController(
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetVocationalReportById([FromRoute] int id, CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var report = await reportQueryService.Handle(new GetVocationalReportByIdQuery(id), cancellationToken);
@@ -79,7 +79,7 @@ public class VocationalReportsController(
     public async Task<IActionResult> GenerateVocationalReport([FromBody] GenerateVocationalReportResource resource,
         CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         if (!EnumResourceMapper.TryParse<EReportType>(resource.ReportType, out var reportType))
@@ -110,7 +110,7 @@ public class VocationalReportsController(
     public async Task<IActionResult> UpdateVocationalReportContent([FromRoute] int id,
         [FromBody] UpdateVocationalReportContentResource resource, CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var command = UpdateVocationalReportContentCommandFromResourceAssembler.ToCommandFromResource(resource, id,
@@ -133,7 +133,7 @@ public class VocationalReportsController(
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> ValidateVocationalReport([FromRoute] int id, CancellationToken cancellationToken)
     {
-        var authenticatedId = AuthenticatedUserAssembler.GetAuthenticatedUserId(HttpContext);
+        var authenticatedId = await AuthenticatedUserAssembler.GetAuthenticatedPsychologistIdAsync(HttpContext);
         if (authenticatedId is null) return Unauthorized();
 
         var result = await reportCommandService.Handle(new ValidateVocationalReportCommand(id, authenticatedId.Value),

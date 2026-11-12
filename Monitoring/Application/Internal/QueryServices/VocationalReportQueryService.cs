@@ -19,7 +19,7 @@ public class VocationalReportQueryService(IVocationalReportRepository reportRepo
     public async Task<IEnumerable<VocationalReport>> Handle(GetAllVocationalReportsQuery query,
         CancellationToken cancellationToken)
     {
-        int? studentId = query.StudentId is { } student ? student.Value : null;
+        Guid? studentId = query.StudentId is { } student ? student.Value : null;
         return await reportRepository.FindByPsychologistIdAsNoTrackingAsync(query.PsychologistId, studentId,
             cancellationToken);
     }

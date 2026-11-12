@@ -4,7 +4,7 @@ namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.Commands;
 
 public record GenerateVocationalReportCommand(StudentId StudentId, PsychologistId PsychologistId, EReportType ReportType)
 {
-    public GenerateVocationalReportCommand(int studentId, int psychologistId, EReportType reportType)
+    public GenerateVocationalReportCommand(Guid studentId, Guid psychologistId, EReportType reportType)
         : this(new StudentId(studentId), new PsychologistId(psychologistId), reportType)
     {
     }

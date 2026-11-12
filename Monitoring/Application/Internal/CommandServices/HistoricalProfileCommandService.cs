@@ -24,8 +24,8 @@ public class HistoricalProfileCommandService(
     public async Task<Result<HistoricalProfile>> Handle(CreateHistoricalProfileCommand command,
         CancellationToken cancellationToken)
     {
-        if (!await externalIamService.ExistsUserByIdAsync(command.StudentId, cancellationToken) ||
-            !await externalIamService.ExistsUserByIdAsync(command.PsychologistId, cancellationToken))
+        if (!await externalIamService.ExistsStudentByIdAsync(command.StudentId, cancellationToken) ||
+            !await externalIamService.ExistsPsychologistByIdAsync(command.PsychologistId, cancellationToken))
             return Result<HistoricalProfile>.Failure(MonitoringErrors.UserNotFound, MonitoringError.UserNotFound);
 
         if (await profileRepository.ExistsByStudentIdAsync(command.StudentId, cancellationToken))

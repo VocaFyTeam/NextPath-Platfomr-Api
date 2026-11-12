@@ -6,7 +6,7 @@ namespace VocaFy.NextPath.Platform.Monitoring.Interfaces.Rest.Transform;
 public static class GenerateGroupComparisonReportCommandFromResourceAssembler
 {
     public static GenerateGroupComparisonReportCommand ToCommandFromResource(
-        GenerateGroupComparisonReportResource resource, int psychologistId)
+        GenerateGroupComparisonReportResource resource, Guid psychologistId)
     {
         ArgumentNullException.ThrowIfNull(resource);
         return new GenerateGroupComparisonReportCommand(psychologistId, resource.GroupIds ?? Array.Empty<int>());

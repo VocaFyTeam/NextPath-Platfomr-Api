@@ -54,7 +54,7 @@ public static class MonitoringErrors
     public static readonly Error ReportAlreadyValidated =
         Error.Conflict("Monitoring.ReportAlreadyValidated", "The report is already validated and cannot be modified.");
 
-    public static Error HistoricalProfileAlreadyExistsForStudent(int studentId) =>
+    public static Error HistoricalProfileAlreadyExistsForStudent(Guid studentId) =>
         Error.Conflict("Monitoring.HistoricalProfileAlreadyExists",
             $"The student with id {studentId} already has a historical profile.");
 

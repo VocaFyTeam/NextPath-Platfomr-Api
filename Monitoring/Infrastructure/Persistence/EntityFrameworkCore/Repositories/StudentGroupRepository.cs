@@ -11,14 +11,14 @@ public class StudentGroupRepository(AppDbContext context) : BaseRepository<Stude
 {
 
 
-    public new async Task<StudentGroup?> FindByIdAsync(int id, CancellationToken cancellationToken)
+    public async Task<StudentGroup?> FindByIdAsync(int id, CancellationToken cancellationToken)
     {
         var groupId = new StudentGroupId(id);
         return await Context.Set<StudentGroup>().FirstOrDefaultAsync(group => group.Id == groupId, cancellationToken);
     }
 
 
-    public new async Task<StudentGroup?> FindByIdAsNoTrackingAsync(int id,
+    public async Task<StudentGroup?> FindByIdAsNoTrackingAsync(int id,
         CancellationToken cancellationToken = default)
     {
         var groupId = new StudentGroupId(id);
@@ -28,7 +28,7 @@ public class StudentGroupRepository(AppDbContext context) : BaseRepository<Stude
     }
 
 
-    public async Task<IEnumerable<StudentGroup>> FindByPsychologistIdAsNoTrackingAsync(int psychologistId,
+    public async Task<IEnumerable<StudentGroup>> FindByPsychologistIdAsNoTrackingAsync(Guid psychologistId,
         CancellationToken cancellationToken)
     {
         var ownerId = new PsychologistId(psychologistId);
@@ -51,7 +51,7 @@ public class StudentGroupRepository(AppDbContext context) : BaseRepository<Stude
     }
 
 
-    public async Task<bool> ExistsByNameAndPsychologistIdAsync(string name, int psychologistId,
+    public async Task<bool> ExistsByNameAndPsychologistIdAsync(string name, Guid psychologistId,
         CancellationToken cancellationToken)
     {
         var ownerId = new PsychologistId(psychologistId);
