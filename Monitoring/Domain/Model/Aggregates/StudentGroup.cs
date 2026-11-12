@@ -20,7 +20,8 @@ public partial class StudentGroup : AggregateRoot
     public StudentGroup(string name, string? description, PsychologistId psychologistId) : this()
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(name);
-        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(psychologistId.Value);
+        if (psychologistId.Value == Guid.Empty)
+            throw new ArgumentException("The id cannot be empty.", nameof(psychologistId));
         Name = name.Trim();
         Description = description?.Trim() ?? string.Empty;
         PsychologistId = psychologistId;

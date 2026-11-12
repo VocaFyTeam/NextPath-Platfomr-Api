@@ -24,8 +24,10 @@ public partial class HistoricalProfile : AggregateRoot
     public HistoricalProfile(StudentId studentId, PsychologistId psychologistId, StudentGroupId? groupId,
         string? observationSummary) : this()
     {
-        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(studentId.Value);
-        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(psychologistId.Value);
+        if (studentId.Value == Guid.Empty)
+            throw new ArgumentException("The id cannot be empty.", nameof(studentId));
+        if (psychologistId.Value == Guid.Empty)
+            throw new ArgumentException("The id cannot be empty.", nameof(psychologistId));
         StudentId = studentId;
         AssignedPsychologistId = psychologistId;
         GroupId = groupId;
