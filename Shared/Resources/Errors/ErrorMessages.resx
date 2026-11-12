@@ -57,4 +57,7 @@
   <data name="DuplicateResourceTitle" xml:space="preserve">
     <value>You already published a resource with that title.</value>
   </data>
+  <data name="WeakPassword" xml:space="preserve">
+    <value>Password must have 12 to 72 characters, with at least one letter and one number.</value>
+  </data>
 </root>

@@ -6,8 +6,8 @@ namespace VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrame
 public class UnitOfWork(AppDbContext context) : IUnitOfWork
 {
     // inheritedDoc
-    public async Task CompleteAsync(CancellationToken cancellationToken = default)
+    public async Task<int> CompleteAsync(CancellationToken cancellationToken = default)
     {
-        await context.SaveChangesAsync(cancellationToken);
+        return await context.SaveChangesAsync(cancellationToken);
     }
 }

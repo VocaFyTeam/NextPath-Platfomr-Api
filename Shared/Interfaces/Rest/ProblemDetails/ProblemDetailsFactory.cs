@@ -1,45 +1,44 @@
+using VocaFy.NextPath.Platform.Resources.Errors;
+using VocaFy.NextPath.Platform.Resources.Shared;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Extensions.Localization;
 
-namespace VocaFy.NextPath.Platform.Shared.Interfaces.Rest;
+namespace VocaFy.NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
 
-public class ProblemDetailsFactory : Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsFactory
+public class ProblemDetailsFactory(
+    IStringLocalizer<ErrorMessages> errorLocalizer,
+    IStringLocalizer<CommonMessages> commonLocalizer,
+    Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsFactory aspNetCoreProblemDetailsFactory)
 {
-    public override ProblemDetails CreateProblemDetails(
-        HttpContext httpContext,
-        int? statusCode = null,
-        string? title = null,
-        string? type = null,
-        string? detail = null,
-        string? instance = null)
+    public IActionResult CreateProblemDetails(
+        ControllerBase controller,
+        int statusCode,
+        Enum? errorEnum,
+        string detailMessage)
     {
-        return new ProblemDetails
-        {
-            Status = statusCode ?? StatusCodes.Status500InternalServerError,
-            Title = title ?? "An error occurred.",
-            Type = type,
-            Detail = detail,
-            Instance = instance ?? httpContext.Request.Path
-        };
+        var title = errorEnum != null ? errorLocalizer[$"{errorEnum}"] : commonLocalizer["InternalServerError"];
+        var problemDetails = aspNetCoreProblemDetailsFactory.CreateProblemDetails(
+            controller.HttpContext,
+            statusCode,
+            title,
+            detail: detailMessage,
+            instance: controller.HttpContext.Request.Path);
+        return controller.StatusCode(statusCode, problemDetails);
     }
 
-    public override ValidationProblemDetails CreateValidationProblemDetails(
-        HttpContext httpContext,
-        ModelStateDictionary modelStateDictionary,
-        int? statusCode = null,
-        string? title = null,
-        string? type = null,
-        string? detail = null,
-        string? instance = null)
+    public IActionResult CreateProblemDetails(
+        ControllerBase controller,
+        int statusCode,
+        string titleKey,
+        string detailKey,
+        params object[] detailArgs)
     {
-        return new ValidationProblemDetails(modelStateDictionary)
-        {
-            Status = statusCode ?? StatusCodes.Status400BadRequest,
-            Title = title ?? "One or more validation errors occurred.",
-            Type = type,
-            Detail = detail,
-            Instance = instance ?? httpContext.Request.Path
-        };
+        var problemDetails = aspNetCoreProblemDetailsFactory.CreateProblemDetails(
+            controller.HttpContext,
+            statusCode,
+            commonLocalizer[titleKey],
+            detail: errorLocalizer[detailKey, detailArgs],
+            instance: controller.HttpContext.Request.Path);
+        return controller.StatusCode(statusCode, problemDetails);
     }
 }
