@@ -1,10 +1,10 @@
-using NextPath.Platform.Shared.Domain.Model.Aggregates.Internal;
-using NextPath.Platform.Shared.Domain.Model.Entities;
-using NextPath.Platform.Tasks.Domain.Model.Commands;
-using NextPath.Platform.Tasks.Domain.Model.Events;
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Aggregates.Internal;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Entities;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Events;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Domain.Model.Aggregates;
+namespace VocaFy.NextPath.Platform.Tasks.Domain.Model.Aggregates;
 
 /// <summary>A task of the personal vocational plan of a student (HU22, HU23, HU24).</summary>
 public class StudentTask : AggregateRoot, IAuditableEntity

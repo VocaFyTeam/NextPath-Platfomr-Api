@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration.ValueConverters;
-using NextPath.Platform.Tasks.Domain.Model.Aggregates;
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration.ValueConverters;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Infrastructure.Persistence.EntityFrameworkCore.Configuration.Extensions;
+namespace VocaFy.NextPath.Platform.Tasks.Infrastructure.Persistence.EntityFrameworkCore.Configuration.Extensions;
 
 public static class ModelBuilderExtensions
 {

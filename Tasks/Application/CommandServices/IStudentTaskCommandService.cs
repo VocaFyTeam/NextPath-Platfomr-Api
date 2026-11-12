@@ -1,8 +1,8 @@
-using NextPath.Platform.Shared.Application.Model;
-using NextPath.Platform.Tasks.Domain.Model.Aggregates;
-using NextPath.Platform.Tasks.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.Shared.Application.Model;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Commands;
 
-namespace NextPath.Platform.Tasks.Application.CommandServices;
+namespace VocaFy.NextPath.Platform.Tasks.Application.CommandServices;
 
 public interface IStudentTaskCommandService
 {

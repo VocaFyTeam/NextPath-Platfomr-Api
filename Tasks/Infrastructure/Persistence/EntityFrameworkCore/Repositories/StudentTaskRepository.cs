@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration;
-using NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
-using NextPath.Platform.Tasks.Domain.Model.Aggregates;
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
-using NextPath.Platform.Tasks.Domain.Repositories;
+using VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration;
+using VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Tasks.Domain.Repositories;
 
-namespace NextPath.Platform.Tasks.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
+namespace VocaFy.NextPath.Platform.Tasks.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
 
 public class StudentTaskRepository(AppDbContext context)
     : BaseRepository<StudentTask>(context), IStudentTaskRepository

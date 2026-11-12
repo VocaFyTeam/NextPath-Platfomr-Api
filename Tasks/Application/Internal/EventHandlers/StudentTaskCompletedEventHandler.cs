@@ -1,8 +1,8 @@
 using Microsoft.Extensions.Logging;
-using NextPath.Platform.Shared.Application.Internal.EventHandlers;
-using NextPath.Platform.Tasks.Domain.Model.Events;
+using VocaFy.NextPath.Platform.Shared.Application.Internal.EventHandlers;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Events;
 
-namespace NextPath.Platform.Tasks.Application.Internal.EventHandlers;
+namespace VocaFy.NextPath.Platform.Tasks.Application.Internal.EventHandlers;
 
 public class StudentTaskCompletedEventHandler(ILogger<StudentTaskCompletedEventHandler> logger)
     : IEventHandler<StudentTaskCompletedEvent>

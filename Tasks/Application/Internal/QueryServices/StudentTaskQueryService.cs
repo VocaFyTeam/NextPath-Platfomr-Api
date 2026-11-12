@@ -1,9 +1,9 @@
-using NextPath.Platform.Tasks.Application.QueryServices;
-using NextPath.Platform.Tasks.Domain.Model.Aggregates;
-using NextPath.Platform.Tasks.Domain.Model.Queries;
-using NextPath.Platform.Tasks.Domain.Repositories;
+using VocaFy.NextPath.Platform.Tasks.Application.QueryServices;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.Tasks.Domain.Repositories;
 
-namespace NextPath.Platform.Tasks.Application.Internal.QueryServices;
+namespace VocaFy.NextPath.Platform.Tasks.Application.Internal.QueryServices;
 
 public class StudentTaskQueryService(IStudentTaskRepository studentTaskRepository) : IStudentTaskQueryService
 {

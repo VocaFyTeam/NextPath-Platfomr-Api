@@ -1,5 +1,5 @@
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Domain.Model.Commands;
+namespace VocaFy.NextPath.Platform.Tasks.Domain.Model.Commands;
 
 public record ChangeStudentTaskStatusCommand(StudentTaskId StudentTaskId, ETaskStatus Status);

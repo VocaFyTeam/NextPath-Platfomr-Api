@@ -1,7 +1,7 @@
-using NextPath.Platform.Tasks.Domain.Model.Queries;
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Application.QueryServices;
+namespace VocaFy.NextPath.Platform.Tasks.Application.QueryServices;
 
 public interface IVocationalProgressQueryService
 {

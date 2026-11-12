@@ -1,4 +1,4 @@
-namespace NextPath.Platform.Tasks.Interfaces.Acl;
+namespace VocaFy.NextPath.Platform.Tasks.Interfaces.Acl;
 
 public record StudentTaskSummary(int CompletedTasks, int TotalTasks);
 

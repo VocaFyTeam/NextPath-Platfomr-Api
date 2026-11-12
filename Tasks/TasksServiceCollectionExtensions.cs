@@ -1,16 +1,16 @@
 using Microsoft.Extensions.DependencyInjection;
-using NextPath.Platform.Tasks.Application.Acl;
-using NextPath.Platform.Tasks.Application.CommandServices;
-using NextPath.Platform.Tasks.Application.Internal.CommandServices;
-using NextPath.Platform.Tasks.Application.Internal.OutboundServices;
-using NextPath.Platform.Tasks.Application.Internal.QueryServices;
-using NextPath.Platform.Tasks.Application.QueryServices;
-using NextPath.Platform.Tasks.Domain.Repositories;
-using NextPath.Platform.Tasks.Infrastructure.OutboundServices;
-using NextPath.Platform.Tasks.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
-using NextPath.Platform.Tasks.Interfaces.Acl;
+using VocaFy.NextPath.Platform.Tasks.Application.Acl;
+using VocaFy.NextPath.Platform.Tasks.Application.CommandServices;
+using VocaFy.NextPath.Platform.Tasks.Application.Internal.CommandServices;
+using VocaFy.NextPath.Platform.Tasks.Application.Internal.OutboundServices;
+using VocaFy.NextPath.Platform.Tasks.Application.Internal.QueryServices;
+using VocaFy.NextPath.Platform.Tasks.Application.QueryServices;
+using VocaFy.NextPath.Platform.Tasks.Domain.Repositories;
+using VocaFy.NextPath.Platform.Tasks.Infrastructure.OutboundServices;
+using VocaFy.NextPath.Platform.Tasks.Infrastructure.Persistence.EntityFrameworkCore.Repositories;
+using VocaFy.NextPath.Platform.Tasks.Interfaces.Acl;
 
-namespace NextPath.Platform.Tasks;
+namespace VocaFy.NextPath.Platform.Tasks;
 
 public static class TasksServiceCollectionExtensions
 {

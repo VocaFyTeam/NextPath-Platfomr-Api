@@ -1,16 +1,16 @@
 using System.Net.Mime;
 using Microsoft.AspNetCore.Mvc;
-using NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
-using NextPath.Platform.Tasks.Application.CommandServices;
-using NextPath.Platform.Tasks.Application.QueryServices;
-using NextPath.Platform.Tasks.Domain.Model;
-using NextPath.Platform.Tasks.Domain.Model.Commands;
-using NextPath.Platform.Tasks.Domain.Model.Queries;
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
-using NextPath.Platform.Tasks.Interfaces.Rest.Resources;
-using NextPath.Platform.Tasks.Interfaces.Rest.Transform;
+using VocaFy.NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
+using VocaFy.NextPath.Platform.Tasks.Application.CommandServices;
+using VocaFy.NextPath.Platform.Tasks.Application.QueryServices;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Tasks.Interfaces.Rest.Resources;
+using VocaFy.NextPath.Platform.Tasks.Interfaces.Rest.Transform;
 
-namespace NextPath.Platform.Tasks.Interfaces.Rest;
+namespace VocaFy.NextPath.Platform.Tasks.Interfaces.Rest;
 
 /// <summary>Personal vocational plan and progress of the student (HU21-HU24, TS12).</summary>
 [ApiController]

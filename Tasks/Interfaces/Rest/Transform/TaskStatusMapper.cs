@@ -1,6 +1,6 @@
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Interfaces.Rest.Transform;
+namespace VocaFy.NextPath.Platform.Tasks.Interfaces.Rest.Transform;
 
 /// <summary>Converts between the JSON values "pending"/"completed" and <see cref="ETaskStatus"/>.</summary>
 public static class TaskStatusMapper

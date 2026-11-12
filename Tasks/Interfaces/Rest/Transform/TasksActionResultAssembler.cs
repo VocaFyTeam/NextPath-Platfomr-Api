@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
-using NextPath.Platform.Shared.Application.Model;
-using NextPath.Platform.Shared.Domain.Model.Errors;
-using NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
-using NextPath.Platform.Tasks.Domain.Model;
-using NextPath.Platform.Tasks.Domain.Model.Errors;
+using VocaFy.NextPath.Platform.Shared.Application.Model;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Errors;
+using VocaFy.NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Errors;
 
-namespace NextPath.Platform.Tasks.Interfaces.Rest.Transform;
+namespace VocaFy.NextPath.Platform.Tasks.Interfaces.Rest.Transform;
 
 public static class TasksActionResultAssembler
 {

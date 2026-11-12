@@ -1,11 +1,11 @@
-using NextPath.Platform.CareerExploration.Interfaces.Acl;
-using NextPath.Platform.Tasks.Application.Internal.OutboundServices;
-using NextPath.Platform.Tasks.Application.QueryServices;
-using NextPath.Platform.Tasks.Domain.Model.Queries;
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
-using NextPath.Platform.Tasks.Domain.Repositories;
+using VocaFy.NextPath.Platform.CareerExploration.Interfaces.Acl;
+using VocaFy.NextPath.Platform.Tasks.Application.Internal.OutboundServices;
+using VocaFy.NextPath.Platform.Tasks.Application.QueryServices;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Queries;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Tasks.Domain.Repositories;
 
-namespace NextPath.Platform.Tasks.Application.Internal.QueryServices;
+namespace VocaFy.NextPath.Platform.Tasks.Application.Internal.QueryServices;
 
 /// <summary>
 ///     Combines data of three contexts: its own tasks, the tests (Assessments, through a port) and the

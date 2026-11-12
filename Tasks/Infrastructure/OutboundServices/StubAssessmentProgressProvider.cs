@@ -1,7 +1,7 @@
-using NextPath.Platform.Tasks.Application.Internal.OutboundServices;
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Tasks.Application.Internal.OutboundServices;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Infrastructure.OutboundServices;
+namespace VocaFy.NextPath.Platform.Tasks.Infrastructure.OutboundServices;
 
 /// <summary>
 ///     TEMPORARY adapter: reports "0 tests completed" until the Assessments context publishes its facade.

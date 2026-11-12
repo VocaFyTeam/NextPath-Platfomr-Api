@@ -1,7 +1,7 @@
-using NextPath.Platform.Tasks.Domain.Model.Aggregates;
-using NextPath.Platform.Tasks.Interfaces.Rest.Resources;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Tasks.Interfaces.Rest.Resources;
 
-namespace NextPath.Platform.Tasks.Interfaces.Rest.Transform;
+namespace VocaFy.NextPath.Platform.Tasks.Interfaces.Rest.Transform;
 
 public static class StudentTaskResourceFromEntityAssembler
 {

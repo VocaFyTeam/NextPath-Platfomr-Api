@@ -1,4 +1,4 @@
-namespace NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+namespace VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
 /// <summary>
 ///     Overall progress of a student on the platform (HU21). Rule migrated from the frontend

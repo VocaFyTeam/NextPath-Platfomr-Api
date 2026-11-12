@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace NextPath.Platform.Tasks.Interfaces.Rest.Resources;
+namespace VocaFy.NextPath.Platform.Tasks.Interfaces.Rest.Resources;
 
 public record CreateStudentTaskResource(
     [property: Range(1, int.MaxValue, ErrorMessage = "StudentId must be a positive number")]

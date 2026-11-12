@@ -1,6 +1,6 @@
-using NextPath.Platform.Shared.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+namespace VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
 /// <summary>Reference to a student of the IAM context (id only, no navigation).</summary>
 public readonly record struct StudentId(int Value) : IEntityId<int>

@@ -1,8 +1,8 @@
-using NextPath.Platform.Shared.Domain.Repositories;
-using NextPath.Platform.Tasks.Domain.Model.Aggregates;
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Domain.Repositories;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Domain.Repositories;
+namespace VocaFy.NextPath.Platform.Tasks.Domain.Repositories;
 
 public interface IStudentTaskRepository : IBaseRepository<StudentTask>
 {

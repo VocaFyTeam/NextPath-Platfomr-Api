@@ -1,5 +1,5 @@
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Domain.Model.Queries;
+namespace VocaFy.NextPath.Platform.Tasks.Domain.Model.Queries;
 
 public record GetVocationalProgressByStudentIdQuery(StudentId StudentId);

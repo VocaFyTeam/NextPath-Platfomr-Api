@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace NextPath.Platform.Tasks.Interfaces.Rest.Resources;
+namespace VocaFy.NextPath.Platform.Tasks.Interfaces.Rest.Resources;
 
 public record UpdateStudentTaskResource(
     [property: Required(ErrorMessage = "Title is required")]

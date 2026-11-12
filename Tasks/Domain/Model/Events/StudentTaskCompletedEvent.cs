@@ -1,7 +1,7 @@
-using NextPath.Platform.Shared.Domain.Model.Events;
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Events;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Domain.Model.Events;
+namespace VocaFy.NextPath.Platform.Tasks.Domain.Model.Events;
 
 public class StudentTaskCompletedEvent(StudentId studentId, StudentTaskId studentTaskId) : IEvent
 {

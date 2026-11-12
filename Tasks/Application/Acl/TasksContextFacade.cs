@@ -1,8 +1,8 @@
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
-using NextPath.Platform.Tasks.Domain.Repositories;
-using NextPath.Platform.Tasks.Interfaces.Acl;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Tasks.Domain.Repositories;
+using VocaFy.NextPath.Platform.Tasks.Interfaces.Acl;
 
-namespace NextPath.Platform.Tasks.Application.Acl;
+namespace VocaFy.NextPath.Platform.Tasks.Application.Acl;
 
 public class TasksContextFacade(IStudentTaskRepository studentTaskRepository) : ITasksContextFacade
 {

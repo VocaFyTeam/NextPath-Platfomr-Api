@@ -1,6 +1,6 @@
-using NextPath.Platform.Shared.Domain.Model.Errors;
+using VocaFy.NextPath.Platform.Shared.Domain.Model.Errors;
 
-namespace NextPath.Platform.Tasks.Domain.Model.Errors;
+namespace VocaFy.NextPath.Platform.Tasks.Domain.Model.Errors;
 
 public static class TasksErrors
 {

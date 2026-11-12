@@ -1,4 +1,4 @@
-namespace NextPath.Platform.Tasks.Domain.Model;
+namespace VocaFy.NextPath.Platform.Tasks.Domain.Model;
 
 public enum TasksError
 {

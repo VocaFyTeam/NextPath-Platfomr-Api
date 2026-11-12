@@ -1,13 +1,13 @@
-using NextPath.Platform.Shared.Application.Model;
-using NextPath.Platform.Shared.Domain.Repositories;
-using NextPath.Platform.Tasks.Application.CommandServices;
-using NextPath.Platform.Tasks.Domain.Model;
-using NextPath.Platform.Tasks.Domain.Model.Aggregates;
-using NextPath.Platform.Tasks.Domain.Model.Commands;
-using NextPath.Platform.Tasks.Domain.Model.Errors;
-using NextPath.Platform.Tasks.Domain.Repositories;
+using VocaFy.NextPath.Platform.Shared.Application.Model;
+using VocaFy.NextPath.Platform.Shared.Domain.Repositories;
+using VocaFy.NextPath.Platform.Tasks.Application.CommandServices;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Aggregates;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Commands;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.Errors;
+using VocaFy.NextPath.Platform.Tasks.Domain.Repositories;
 
-namespace NextPath.Platform.Tasks.Application.Internal.CommandServices;
+namespace VocaFy.NextPath.Platform.Tasks.Application.Internal.CommandServices;
 
 public class StudentTaskCommandService(
     IStudentTaskRepository studentTaskRepository,

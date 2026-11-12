@@ -1,6 +1,6 @@
-using NextPath.Platform.Tasks.Domain.Model.ValueObjects;
+using VocaFy.NextPath.Platform.Tasks.Domain.Model.ValueObjects;
 
-namespace NextPath.Platform.Tasks.Application.Internal.OutboundServices;
+namespace VocaFy.NextPath.Platform.Tasks.Application.Internal.OutboundServices;
 
 /// <param name="CompletedTests">Distinct vocational tests the student has completed.</param>
 /// <param name="TotalTests">Vocational tests available in the platform catalog.</param>
