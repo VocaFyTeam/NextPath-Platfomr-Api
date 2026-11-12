@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="GenericError" xml:space="preserve">
+    <value>An error occurred.</value>
+  </data>
+  <data name="OperationCancelled" xml:space="preserve">
+    <value>The operation was cancelled.</value>
+  </data>
+  <data name="DatabaseError" xml:space="preserve">
+    <value>A database error occurred.</value>
+  </data>
+  <data name="InternalServerError" xml:space="preserve">
+    <value>An unexpected internal error occurred.</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>User not found.</value>
+  </data>
+  <data name="StudentNotFound" xml:space="preserve">
+    <value>Student not found.</value>
+  </data>
+  <data name="PsychologistNotFound" xml:space="preserve">
+    <value>Psychologist not found.</value>
+  </data>
+  <data name="EmailAlreadyTaken" xml:space="preserve">
+    <value>The email is already registered.</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Invalid email or password.</value>
+  </data>
+  <data name="InvalidRole" xml:space="preserve">
+    <value>The role must be 'student' or 'psychologist'.</value>
+  </data>
+  <data name="MissingStudentData" xml:space="preserve">
+    <value>Students must send school or university and current cycle.</value>
+  </data>
+  <data name="MissingPsychologistData" xml:space="preserve">
+    <value>Psychologists must send professional license and specialty.</value>
+  </data>
+  <data name="InvalidLinkingCode" xml:space="preserve">
+    <value>No psychologist has that linking code.</value>
+  </data>
+  <data name="InvalidOrExpiredResetToken" xml:space="preserve">
+    <value>The reset token is invalid, used or expired.</value>
+  </data>
+  <data name="ProfileOwnershipRequired" xml:space="preserve">
+    <value>You can only modify your own profile.</value>
+  </data>
+  <data name="VocationalResourceNotFound" xml:space="preserve">
+    <value>Vocational resource not found.</value>
+  </data>
+  <data name="NotAPsychologist" xml:space="preserve">
+    <value>Only psychologists can publish resources.</value>
+  </data>
+  <data name="NotResourceOwner" xml:space="preserve">
+    <value>Only the psychologist who published the resource can change it.</value>
+  </data>
+  <data name="DuplicateResourceTitle" xml:space="preserve">
+    <value>You already published a resource with that title.</value>
+  </data>
+  <data name="WeakPassword" xml:space="preserve">
+    <value>Password must have 12 to 72 characters, with at least one letter and one number.</value>
+  </data>
+</root>

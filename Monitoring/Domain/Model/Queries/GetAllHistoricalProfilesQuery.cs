@@ -1,0 +1,14 @@
+using VocaFy.NextPath.Platform.Monitoring.Domain.Model.ValueObjects;
+
+namespace VocaFy.NextPath.Platform.Monitoring.Domain.Model.Queries;
+
+public record GetAllHistoricalProfilesQuery(PsychologistId PsychologistId, StudentGroupId? GroupId = null,
+    StudentId? StudentId = null)
+{
+    public GetAllHistoricalProfilesQuery(Guid psychologistId, int? groupId, Guid? studentId)
+        : this(new PsychologistId(psychologistId),
+            groupId.HasValue ? new StudentGroupId(groupId.Value) : null,
+            studentId.HasValue ? new StudentId(studentId.Value) : null)
+    {
+    }
+}

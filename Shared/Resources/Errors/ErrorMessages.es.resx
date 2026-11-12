@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="GenericError" xml:space="preserve">
+    <value>Ocurrió un error.</value>
+  </data>
+  <data name="OperationCancelled" xml:space="preserve">
+    <value>La operación fue cancelada.</value>
+  </data>
+  <data name="DatabaseError" xml:space="preserve">
+    <value>Ocurrió un error en la base de datos.</value>
+  </data>
+  <data name="InternalServerError" xml:space="preserve">
+    <value>Ocurrió un error interno inesperado.</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>Usuario no encontrado.</value>
+  </data>
+  <data name="StudentNotFound" xml:space="preserve">
+    <value>Estudiante no encontrado.</value>
+  </data>
+  <data name="PsychologistNotFound" xml:space="preserve">
+    <value>Psicólogo no encontrado.</value>
+  </data>
+  <data name="EmailAlreadyTaken" xml:space="preserve">
+    <value>El correo ya está registrado.</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Correo o contraseña inválidos.</value>
+  </data>
+  <data name="InvalidRole" xml:space="preserve">
+    <value>El rol debe ser 'student' o 'psychologist'.</value>
+  </data>
+  <data name="MissingStudentData" xml:space="preserve">
+    <value>El estudiante debe enviar colegio o universidad y ciclo actual.</value>
+  </data>
+  <data name="MissingPsychologistData" xml:space="preserve">
+    <value>El psicólogo debe enviar colegiatura y especialidad.</value>
+  </data>
+  <data name="InvalidLinkingCode" xml:space="preserve">
+    <value>Ningún psicólogo tiene ese código de vinculación.</value>
+  </data>
+  <data name="InvalidOrExpiredResetToken" xml:space="preserve">
+    <value>El token de recuperación es inválido, ya se usó o expiró.</value>
+  </data>
+  <data name="ProfileOwnershipRequired" xml:space="preserve">
+    <value>Solo puedes modificar tu propio perfil.</value>
+  </data>
+  <data name="VocationalResourceNotFound" xml:space="preserve">
+    <value>Recurso vocacional no encontrado.</value>
+  </data>
+  <data name="NotAPsychologist" xml:space="preserve">
+    <value>Solo los psicólogos pueden publicar recursos.</value>
+  </data>
+  <data name="NotResourceOwner" xml:space="preserve">
+    <value>Solo el psicólogo que publicó el recurso puede modificarlo.</value>
+  </data>
+  <data name="DuplicateResourceTitle" xml:space="preserve">
+    <value>Ya publicaste un recurso con ese título.</value>
+  </data>
+  <data name="WeakPassword" xml:space="preserve">
+    <value>La contraseña debe tener entre 12 y 72 caracteres, con al menos una letra y un número.</value>
+  </data>
+</root>
