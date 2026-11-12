@@ -121,6 +121,36 @@ builder.Services.AddScoped<IVocationalResourceCommandService, VocationalResource
 builder.Services.AddScoped<IVocationalResourceQueryService, VocationalResourceQueryService>();
 builder.Services.AddScoped<ExternalIamService>();
 
+// Assessments Bounded Context
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Assessments.Domain.Repositories.IVocationalTestRepository, VocaFy.NextPath.Platform.Assessments.Infrastructure.Persistence.EntityFrameworkCore.Repositories.VocationalTestRepository>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Assessments.Application.CommandServices.IVocationalTestCommandService, VocaFy.NextPath.Platform.Assessments.Application.Internal.CommandServices.VocationalTestCommandService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Assessments.Application.QueryServices.IVocationalTestQueryService, VocaFy.NextPath.Platform.Assessments.Application.Internal.QueryServices.VocationalTestQueryService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Assessments.Domain.Repositories.ITestResultRepository, VocaFy.NextPath.Platform.Assessments.Infrastructure.Persistence.EntityFrameworkCore.Repositories.TestResultRepository>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Assessments.Application.CommandServices.ITestResultCommandService, VocaFy.NextPath.Platform.Assessments.Application.Internal.CommandServices.TestResultCommandService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Assessments.Application.QueryServices.ITestResultQueryService, VocaFy.NextPath.Platform.Assessments.Application.Internal.QueryServices.TestResultQueryService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Assessments.Interfaces.Acl.IAssessmentsContextFacade, VocaFy.NextPath.Platform.Assessments.Application.Acl.AssessmentsContextFacade>();
+
+// Community Bounded Context
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Community.Domain.Repositories.ICommunityRepository, VocaFy.NextPath.Platform.Community.Infrastructure.Persistence.EntityFrameworkCore.Repositories.CommunityRepository>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Community.Application.CommandServices.ICommunityCommandService, VocaFy.NextPath.Platform.Community.Application.Internal.CommandServices.CommunityCommandService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Community.Application.QueryServices.ICommunityQueryService, VocaFy.NextPath.Platform.Community.Application.Internal.QueryServices.CommunityQueryService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Community.Domain.Repositories.IForumThreadRepository, VocaFy.NextPath.Platform.Community.Infrastructure.Persistence.EntityFrameworkCore.Repositories.ForumThreadRepository>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Community.Application.CommandServices.IForumThreadCommandService, VocaFy.NextPath.Platform.Community.Application.Internal.CommandServices.ForumThreadCommandService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Community.Application.QueryServices.IForumThreadQueryService, VocaFy.NextPath.Platform.Community.Application.Internal.QueryServices.ForumThreadQueryService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Community.Domain.Repositories.ICommentRepository, VocaFy.NextPath.Platform.Community.Infrastructure.Persistence.EntityFrameworkCore.Repositories.CommentRepository>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Community.Application.CommandServices.ICommentCommandService, VocaFy.NextPath.Platform.Community.Application.Internal.CommandServices.CommentCommandService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Community.Application.QueryServices.ICommentQueryService, VocaFy.NextPath.Platform.Community.Application.Internal.QueryServices.CommentQueryService>();
+
+// Counseling Bounded Context
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Counseling.Domain.Repositories.ISessionRepository, VocaFy.NextPath.Platform.Counseling.Infrastructure.Persistence.EntityFrameworkCore.Repositories.SessionRepository>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Counseling.Application.CommandServices.ISessionCommandService, VocaFy.NextPath.Platform.Counseling.Application.Internal.CommandServices.SessionCommandService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Counseling.Application.QueryServices.ISessionQueryService, VocaFy.NextPath.Platform.Counseling.Application.Internal.QueryServices.SessionQueryService>();
+builder.Services.AddScoped<VocaFy.NextPath.Platform.Counseling.Application.Internal.OutboundServices.ExternalIamService>();
+
+// Career Exploration, Tasks and Monitoring are registered when they compile against Shared/IAM:
+// builder.Services.AddCareerExplorationContext();   
+// builder.Services.AddTasksContext();
+
 // (Each teammate registers here the services of their bounded context)
 
 // ---------- Mediator (Cortex) ----------
