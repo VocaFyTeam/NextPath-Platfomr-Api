@@ -32,7 +32,7 @@ public class PsychologistsController(
     [ProducesResponseType(typeof(IEnumerable<PsychologistResource>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetPsychologists(CancellationToken cancellationToken)
     {
-        return Forbid();
+        return StatusCode(StatusCodes.Status403Forbidden);
     }
 
     [HttpGet("{psychologistId:guid}")]
@@ -46,7 +46,7 @@ public class PsychologistsController(
         if (psychologist is null)
             return IamActionResultAssembler.ToNotFound(this, IamError.PsychologistNotFound, errorLocalizer,
                 problemDetailsFactory);
-        if (this.GetAuthenticatedUserId() != psychologist.UserId.Value) return Forbid();
+        if (this.GetAuthenticatedUserId() != psychologist.UserId.Value) return StatusCode(StatusCodes.Status403Forbidden);
         return Ok(PsychologistResourceFromEntityAssembler.ToResourceFromEntity(psychologist));
     }
 

@@ -19,7 +19,6 @@ public class AuthorizeAttribute : Attribute, IAuthorizationFilter
 
         if (allowAnonymous)
         {
-            Console.WriteLine(" Skipping authorization");
             return;
         }
 
@@ -32,6 +31,6 @@ public class AuthorizeAttribute : Attribute, IAuthorizationFilter
         }
 
         if (_allowedRoles.Length > 0 && !_allowedRoles.Contains(user.Role))
-            context.Result = new ForbidResult();
+            context.Result = new StatusCodeResult(StatusCodes.Status403Forbidden);
     }
 }

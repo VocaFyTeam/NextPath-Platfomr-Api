@@ -51,7 +51,7 @@ public class UsersController(
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetUserById(Guid userId, CancellationToken cancellationToken)
     {
-        if (this.GetAuthenticatedUserId() != userId) return Forbid();
+        if (this.GetAuthenticatedUserId() != userId) return StatusCode(StatusCodes.Status403Forbidden);
 
         var user = await userQueryService.Handle(new GetUserByIdQuery(new UserId(userId)), cancellationToken);
         if (user is null)
@@ -70,6 +70,6 @@ public class UsersController(
     [ProducesResponseType(typeof(IEnumerable<UserResource>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAllUsers(CancellationToken cancellationToken)
     {
-        return Forbid();
+        return StatusCode(StatusCodes.Status403Forbidden);
     }
 }

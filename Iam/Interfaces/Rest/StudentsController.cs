@@ -41,9 +41,9 @@ public class StudentsController(
         if (userId is null) return Unauthorized();
         var psychologist = await psychologistQueryService.Handle(
             new GetPsychologistByUserIdQuery(new UserId(userId.Value)), cancellationToken);
-        if (psychologist is null) return Forbid();
+        if (psychologist is null) return StatusCode(StatusCodes.Status403Forbidden);
         var requestedCode = Psychologist.NormalizeLinkingCode(linkedPsychologistCode);
-        if (requestedCode is not null && requestedCode != psychologist.UniqueLinkingCode) return Forbid();
+        if (requestedCode is not null && requestedCode != psychologist.UniqueLinkingCode) return StatusCode(StatusCodes.Status403Forbidden);
         var students = await studentQueryService.Handle(new GetAllStudentsQuery(psychologist.UniqueLinkingCode),
             cancellationToken);
         return Ok(students.Select(StudentResourceFromEntityAssembler.ToResourceFromEntity));
@@ -69,7 +69,7 @@ public class StudentsController(
             isLinkedPsychologist = psychologist is not null &&
                                    student.LinkedPsychologistCode == psychologist.UniqueLinkingCode;
         }
-        if (!isOwner && !isLinkedPsychologist) return Forbid();
+        if (!isOwner && !isLinkedPsychologist) return StatusCode(StatusCodes.Status403Forbidden);
         return Ok(StudentResourceFromEntityAssembler.ToResourceFromEntity(student));
     }
 
