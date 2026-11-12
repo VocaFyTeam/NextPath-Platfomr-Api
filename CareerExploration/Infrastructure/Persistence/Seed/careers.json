@@ -1,0 +1,529 @@
+[
+  {
+    "name": "Diseño Gráfico",
+    "emoji": "🎨",
+    "area": "Diseño y Arte",
+    "imageUrl": "/images/careers/graphic-design.jpg",
+    "shortDescription": "Creación de identidades visuales y material publicitario.",
+    "description": "Forma profesionales capaces de comunicar ideas visualmente a través de imágenes, tipografía y medios digitales.",
+    "durationYears": 5,
+    "durationLabel": "5 años (Licenciatura)",
+    "semesters": 10,
+    "modality": "Presencial",
+    "modalityDetail": "Presencial / Remoto",
+    "universities": [
+      {
+        "name": "Universidad Peruana de Ciencias Aplicadas",
+        "acronym": "UPC",
+        "studyPlanUrl": "https://www.upc.edu.pe/"
+      },
+      {
+        "name": "Pontificia Universidad Católica del Perú",
+        "acronym": "PUCP",
+        "studyPlanUrl": "https://www.pucp.edu.pe/"
+      },
+      {
+        "name": "Universidad San Ignacio de Loyola",
+        "acronym": "USIL",
+        "studyPlanUrl": "https://usil.edu.pe/"
+      }
+    ],
+    "fieldOfWork": [
+      "Agencias de publicidad",
+      "Estudios de diseño y branding",
+      "Medios de comunicación y editoriales"
+    ],
+    "mainField": "Agencias, UX/UI, Branding",
+    "skills": [
+      "Creatividad",
+      "Manejo de software de diseño",
+      "Conocimiento de teoría del color",
+      "Trabajo colaborativo"
+    ],
+    "averageSalary": {
+      "min": 980,
+      "max": 3000
+    },
+    "salaryRange": {
+      "min": 1200,
+      "max": 4500
+    },
+    "employabilityRate": 85,
+    "demandLevel": "Alta",
+    "baseCompatibility": 80,
+    "profile": {
+      "artistic": 95,
+      "social": 55,
+      "investigative": 45,
+      "enterprising": 50,
+      "conventional": 35
+    },
+    "projection": [
+      {
+        "period": "Año 1 - 2",
+        "role": "Diseñador Junior",
+        "salary": "S/ 2200 - S/ 3200"
+      },
+      {
+        "period": "Año 3 - 5",
+        "role": "Diseñador UX / UI Senior",
+        "salary": "S/ 4500 - S/ 6000"
+      },
+      {
+        "period": "Año 5 - 8",
+        "role": "Diseñador Creativo / Lead UX",
+        "salary": "S/ 7500 - S/ 10000"
+      },
+      {
+        "period": "Año 8+",
+        "role": "Consultor & Emprendedor Digital",
+        "salary": "S/ 12000+"
+      }
+    ],
+    "recommendations": [
+      "Refuerza dominio de herramientas Figma y Suite Adobe durante el año 1 - 2.",
+      "Participa en talleres de Comunicación Persuasiva para elevar tu nivel Senior.",
+      "Lleva cursos electivos en Gestión de Proyectos Digitales e Inteligencia Artificial."
+    ]
+  },
+  {
+    "name": "Diseño de Interiores",
+    "emoji": "🏢",
+    "area": "Diseño y Arte",
+    "imageUrl": "/images/careers/interior-design.jpg",
+    "shortDescription": "Planeación de espacios funcionales y estéticos.",
+    "description": "Prepara profesionales para proyectar espacios interiores que combinan funcionalidad, confort y estética.",
+    "durationYears": 5,
+    "durationLabel": "5 años (10 Semestres)",
+    "semesters": 10,
+    "modality": "Presencial",
+    "modalityDetail": "Presencial",
+    "universities": [
+      {
+        "name": "Universidad Peruana de Ciencias Aplicadas",
+        "acronym": "UPC",
+        "studyPlanUrl": "https://www.upc.edu.pe/"
+      },
+      {
+        "name": "Universidad de Ciencias y Artes de América Latina",
+        "acronym": "UCAL",
+        "studyPlanUrl": "https://www.ucal.edu.pe/"
+      },
+      {
+        "name": "Toulouse Lautrec",
+        "acronym": "Toulouse",
+        "studyPlanUrl": "https://www.tls.edu.pe/"
+      }
+    ],
+    "fieldOfWork": [
+      "Estudios de arquitectura",
+      "Constructoras e inmobiliarias",
+      "Diseño de mobiliario"
+    ],
+    "mainField": "Estudios, Arquitectura",
+    "skills": [
+      "Visión espacial",
+      "Dibujo técnico y modelado 3D",
+      "Sensibilidad estética",
+      "Gestión de clientes"
+    ],
+    "averageSalary": {
+      "min": 1100,
+      "max": 3200
+    },
+    "salaryRange": {
+      "min": 1500,
+      "max": 4800
+    },
+    "employabilityRate": 78,
+    "demandLevel": "Media",
+    "baseCompatibility": 78,
+    "profile": {
+      "artistic": 90,
+      "social": 50,
+      "investigative": 50,
+      "enterprising": 55,
+      "conventional": 45
+    },
+    "projection": [
+      {
+        "period": "Año 1 - 2",
+        "role": "Asistente de Diseño",
+        "salary": "S/ 1800 - S/ 2800"
+      },
+      {
+        "period": "Año 3 - 5",
+        "role": "Diseñador de Interiores",
+        "salary": "S/ 3500 - S/ 5500"
+      },
+      {
+        "period": "Año 5 - 8",
+        "role": "Jefe de Proyectos",
+        "salary": "S/ 6500 - S/ 9000"
+      },
+      {
+        "period": "Año 8+",
+        "role": "Estudio Propio",
+        "salary": "S/ 10000+"
+      }
+    ],
+    "recommendations": [
+      "Domina AutoCAD, SketchUp y renderizado durante los primeros años.",
+      "Construye un portafolio con proyectos reales de remodelación.",
+      "Especialízate en diseño sostenible y bioclimático."
+    ]
+  },
+  {
+    "name": "Diseño Industrial",
+    "emoji": "🖥️",
+    "area": "Diseño y Arte",
+    "imageUrl": "/images/careers/industrial-design.jpg",
+    "shortDescription": "Desarrollar productos pensados para ser fabricados en serie por métodos industriales.",
+    "description": "Integra creatividad, ingeniería y negocio para diseñar productos útiles, fabricables y sostenibles.",
+    "durationYears": 5,
+    "durationLabel": "5 años (10 Semestres)",
+    "semesters": 10,
+    "modality": "Presencial",
+    "modalityDetail": "Presencial / Taller",
+    "universities": [
+      {
+        "name": "Pontificia Universidad Católica del Perú",
+        "acronym": "PUCP",
+        "studyPlanUrl": "https://www.pucp.edu.pe/"
+      },
+      {
+        "name": "Universidad Peruana de Ciencias Aplicadas",
+        "acronym": "UPC",
+        "studyPlanUrl": "https://www.upc.edu.pe/"
+      },
+      {
+        "name": "Universidad de Ingeniería y Tecnología",
+        "acronym": "UTEC",
+        "studyPlanUrl": "https://www.utec.edu.pe/"
+      },
+      {
+        "name": "SENATI",
+        "acronym": "SENATI",
+        "studyPlanUrl": "https://www.senati.edu.pe/"
+      }
+    ],
+    "fieldOfWork": [
+      "Industria manufacturera",
+      "Diseño de productos",
+      "Innovación y prototipado"
+    ],
+    "mainField": "Industria, Productos Tech",
+    "skills": [
+      "Pensamiento creativo",
+      "Modelado 3D y prototipado",
+      "Conocimiento de materiales",
+      "Resolución de problemas"
+    ],
+    "averageSalary": {
+      "min": 1300,
+      "max": 3500
+    },
+    "salaryRange": {
+      "min": 1800,
+      "max": 5500
+    },
+    "employabilityRate": 88,
+    "demandLevel": "Media",
+    "baseCompatibility": 76,
+    "profile": {
+      "artistic": 80,
+      "social": 40,
+      "investigative": 70,
+      "enterprising": 55,
+      "conventional": 45
+    },
+    "projection": [
+      {
+        "period": "Año 1 - 2",
+        "role": "Diseñador de Producto Junior",
+        "salary": "S/ 2000 - S/ 3000"
+      },
+      {
+        "period": "Año 3 - 5",
+        "role": "Diseñador de Producto",
+        "salary": "S/ 4000 - S/ 6000"
+      },
+      {
+        "period": "Año 5 - 8",
+        "role": "Líder de Innovación",
+        "salary": "S/ 7000 - S/ 9500"
+      },
+      {
+        "period": "Año 8+",
+        "role": "Director de Diseño",
+        "salary": "S/ 11000+"
+      }
+    ],
+    "recommendations": [
+      "Aprende SolidWorks o Fusion 360 y técnicas de prototipado rápido.",
+      "Participa en concursos de diseño e innovación.",
+      "Complementa con cursos de gestión de la producción."
+    ]
+  },
+  {
+    "name": "Periodismo y Medios Digitales",
+    "emoji": "🎙️",
+    "area": "Comunicaciones",
+    "imageUrl": "/images/careers/journalism.svg",
+    "shortDescription": "Investigación, redacción y producción de contenidos en medios digitales.",
+    "description": "Forma comunicadores capaces de investigar, contar historias y producir contenido para medios digitales y tradicionales.",
+    "durationYears": 5,
+    "durationLabel": "5 años (Licenciatura)",
+    "semesters": 10,
+    "modality": "Presencial",
+    "modalityDetail": "Presencial / Remoto",
+    "universities": [
+      {
+        "name": "Universidad de Lima",
+        "acronym": "ULima",
+        "studyPlanUrl": "https://www.ulima.edu.pe/"
+      },
+      {
+        "name": "Pontificia Universidad Católica del Perú",
+        "acronym": "PUCP",
+        "studyPlanUrl": "https://www.pucp.edu.pe/"
+      },
+      {
+        "name": "Universidad Peruana de Ciencias Aplicadas",
+        "acronym": "UPC",
+        "studyPlanUrl": "https://www.upc.edu.pe/"
+      }
+    ],
+    "fieldOfWork": [
+      "Medios digitales y prensa",
+      "Agencias de contenido",
+      "Comunicación corporativa"
+    ],
+    "mainField": "Medios, Contenido Digital",
+    "skills": [
+      "Redacción",
+      "Pensamiento crítico",
+      "Producción audiovisual",
+      "Investigación"
+    ],
+    "averageSalary": {
+      "min": 1025,
+      "max": 3000
+    },
+    "salaryRange": {
+      "min": 1200,
+      "max": 4000
+    },
+    "employabilityRate": 74,
+    "demandLevel": "Media",
+    "baseCompatibility": 74,
+    "profile": {
+      "artistic": 75,
+      "social": 75,
+      "investigative": 60,
+      "enterprising": 60,
+      "conventional": 35
+    },
+    "projection": [
+      {
+        "period": "Año 1 - 2",
+        "role": "Redactor Digital",
+        "salary": "S/ 1500 - S/ 2500"
+      },
+      {
+        "period": "Año 3 - 5",
+        "role": "Productor de Contenidos",
+        "salary": "S/ 3000 - S/ 4500"
+      },
+      {
+        "period": "Año 5 - 8",
+        "role": "Editor / Jefe de Medios",
+        "salary": "S/ 5000 - S/ 8000"
+      },
+      {
+        "period": "Año 8+",
+        "role": "Director de Comunicaciones",
+        "salary": "S/ 9000+"
+      }
+    ],
+    "recommendations": [
+      "Crea un blog o pódcast propio para construir portafolio.",
+      "Aprende edición de video y analítica de audiencias.",
+      "Haz prácticas en una redacción digital desde el tercer año."
+    ]
+  },
+  {
+    "name": "Psicología",
+    "emoji": "🧠",
+    "area": "Ciencias Sociales",
+    "imageUrl": "/images/careers/psychology.svg",
+    "shortDescription": "Estudio del comportamiento humano y los procesos mentales.",
+    "description": "Estudia el comportamiento humano, los procesos cognitivos y el desarrollo emocional para intervenir en salud, educación y organizaciones.",
+    "durationYears": 6,
+    "durationLabel": "6 años (Licenciatura)",
+    "semesters": 12,
+    "modality": "Presencial",
+    "modalityDetail": "Presencial",
+    "universities": [
+      {
+        "name": "Pontificia Universidad Católica del Perú",
+        "acronym": "PUCP",
+        "studyPlanUrl": "https://www.pucp.edu.pe/"
+      },
+      {
+        "name": "Universidad Peruana Cayetano Heredia",
+        "acronym": "UPCH",
+        "studyPlanUrl": "https://www.cayetano.edu.pe/"
+      },
+      {
+        "name": "Universidad Peruana de Ciencias Aplicadas",
+        "acronym": "UPC",
+        "studyPlanUrl": "https://www.upc.edu.pe/"
+      }
+    ],
+    "fieldOfWork": [
+      "Psicología clínica",
+      "Instituciones educativas",
+      "Recursos humanos"
+    ],
+    "mainField": "Clínica, Educación, RR.HH.",
+    "skills": [
+      "Empatía",
+      "Escucha activa",
+      "Análisis del comportamiento",
+      "Ética profesional"
+    ],
+    "averageSalary": {
+      "min": 1200,
+      "max": 3500
+    },
+    "salaryRange": {
+      "min": 1500,
+      "max": 5000
+    },
+    "employabilityRate": 80,
+    "demandLevel": "Alta",
+    "baseCompatibility": 72,
+    "profile": {
+      "artistic": 50,
+      "social": 95,
+      "investigative": 70,
+      "enterprising": 45,
+      "conventional": 40
+    },
+    "projection": [
+      {
+        "period": "Año 1 - 2",
+        "role": "Psicólogo Asistente",
+        "salary": "S/ 1800 - S/ 2600"
+      },
+      {
+        "period": "Año 3 - 5",
+        "role": "Psicólogo Clínico / Organizacional",
+        "salary": "S/ 3000 - S/ 5000"
+      },
+      {
+        "period": "Año 5 - 8",
+        "role": "Especialista",
+        "salary": "S/ 5500 - S/ 8000"
+      },
+      {
+        "period": "Año 8+",
+        "role": "Consultorio Propio",
+        "salary": "S/ 9000+"
+      }
+    ],
+    "recommendations": [
+      "Realiza voluntariados en centros de salud mental.",
+      "Elige una especialidad desde el cuarto año.",
+      "Planifica una maestría para potenciar tu desarrollo."
+    ]
+  },
+  {
+    "name": "Ingeniería de Software",
+    "emoji": "💻",
+    "area": "Tecnología",
+    "imageUrl": "/images/careers/software.svg",
+    "shortDescription": "Diseño, desarrollo y mantenimiento de soluciones de software.",
+    "description": "Forma ingenieros capaces de diseñar, construir y mantener sistemas de software de calidad para problemas reales.",
+    "durationYears": 5,
+    "durationLabel": "5 años (10 Semestres)",
+    "semesters": 10,
+    "modality": "Presencial",
+    "modalityDetail": "Presencial / Híbrido",
+    "universities": [
+      {
+        "name": "Universidad Peruana de Ciencias Aplicadas",
+        "acronym": "UPC",
+        "studyPlanUrl": "https://www.upc.edu.pe/"
+      },
+      {
+        "name": "Universidad de Ingeniería y Tecnología",
+        "acronym": "UTEC",
+        "studyPlanUrl": "https://www.utec.edu.pe/"
+      },
+      {
+        "name": "Pontificia Universidad Católica del Perú",
+        "acronym": "PUCP",
+        "studyPlanUrl": "https://www.pucp.edu.pe/"
+      }
+    ],
+    "fieldOfWork": [
+      "Empresas de tecnología",
+      "Banca y fintech",
+      "Emprendimientos digitales"
+    ],
+    "mainField": "Desarrollo, Cloud, IA",
+    "skills": [
+      "Pensamiento lógico",
+      "Programación",
+      "Trabajo en equipo",
+      "Aprendizaje continuo"
+    ],
+    "averageSalary": {
+      "min": 2500,
+      "max": 6000
+    },
+    "salaryRange": {
+      "min": 3000,
+      "max": 9000
+    },
+    "employabilityRate": 94,
+    "demandLevel": "Alta",
+    "baseCompatibility": 70,
+    "profile": {
+      "artistic": 45,
+      "social": 40,
+      "investigative": 95,
+      "enterprising": 55,
+      "conventional": 65
+    },
+    "projection": [
+      {
+        "period": "Año 1 - 2",
+        "role": "Desarrollador Junior",
+        "salary": "S/ 3000 - S/ 4500"
+      },
+      {
+        "period": "Año 3 - 5",
+        "role": "Desarrollador Senior",
+        "salary": "S/ 6000 - S/ 9000"
+      },
+      {
+        "period": "Año 5 - 8",
+        "role": "Arquitecto de Software",
+        "salary": "S/ 10000 - S/ 14000"
+      },
+      {
+        "period": "Año 8+",
+        "role": "CTO / Consultor",
+        "salary": "S/ 15000+"
+      }
+    ],
+    "recommendations": [
+      "Practica algoritmos y estructuras de datos desde el primer año.",
+      "Contribuye a proyectos open source.",
+      "Obtén certificaciones en la nube."
+    ]
+  }
+]
