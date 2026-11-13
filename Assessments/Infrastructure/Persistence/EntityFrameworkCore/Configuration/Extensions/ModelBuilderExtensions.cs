@@ -4,6 +4,7 @@ using VocaFy.NextPath.Platform.Assessments.Domain.Model.ValueObjects;
 using VocaFy.NextPath.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration.ValueConverters;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace VocaFy.NextPath.Platform.Assessments.Infrastructure.Persistence.EntityFrameworkCore.Configuration.Extensions;
 
 public static class ModelBuilderExtensions
