@@ -2,6 +2,7 @@ using VocaFy.NextPath.Platform.Assessments.Domain.Model.Commands;
 using VocaFy.NextPath.Platform.Assessments.Domain.Model.Entities;
 using VocaFy.NextPath.Platform.Assessments.Domain.Model.ValueObjects;
 using VocaFy.NextPath.Platform.Shared.Domain.Model.Aggregates.Internal;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VocaFy.NextPath.Platform.Assessments.Domain.Model.Aggregates;
 
@@ -51,6 +52,7 @@ public class VocationalTest : AggregateRoot
     public int DurationMinutes { get; private set; }
     public ICollection<TestQuestion> Questions { get; }
 
+    [NotMapped]
     public IEnumerable<TestQuestion> OrderedQuestions => Questions.OrderBy(question => question.Order);
 
     public void AddQuestion(TestQuestionData data)
