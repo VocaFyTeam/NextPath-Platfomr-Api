@@ -37,6 +37,10 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Localization;
 using Scalar.AspNetCore;
 using ProblemDetailsFactory = VocaFy.NextPath.Platform.Shared.Interfaces.Rest.ProblemDetails.ProblemDetailsFactory;
+using VocaFy.NextPath.Platform.CareerExploration;
+using VocaFy.NextPath.Platform.Tasks;
+using VocaFy.NextPath.Platform.Monitoring;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -148,8 +152,10 @@ builder.Services.AddScoped<VocaFy.NextPath.Platform.Counseling.Application.Query
 builder.Services.AddScoped<VocaFy.NextPath.Platform.Counseling.Application.Internal.OutboundServices.ExternalIamService>();
 
 // Career Exploration, Tasks and Monitoring are registered when they compile against Shared/IAM:
-// builder.Services.AddCareerExplorationContext();   
-// builder.Services.AddTasksContext();
+
+builder.Services.AddCareerExplorationContext();
+builder.Services.AddTasksContext();
+builder.Services.AddMonitoringContext();
 
 // (Each teammate registers here the services of their bounded context)
 
