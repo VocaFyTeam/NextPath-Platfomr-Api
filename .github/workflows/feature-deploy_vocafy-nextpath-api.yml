@@ -37,6 +37,9 @@ jobs:
       - name: Publish application
         run: dotnet publish ./VocaFy.NextPath.Platform.csproj -c Release -o ./publish
 
+      - name: Restore Linux dependencies
+        run: dotnet restore ./VocaFy.NextPath.Platform.csproj --runtime linux-x64
+
       - name: Generate migration bundle
         run: |
           dotnet ef migrations bundle \
